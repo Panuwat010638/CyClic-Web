@@ -1,10 +1,10 @@
 'use client'
 import Marquee from "react-fast-marquee";
 
-export default function ContactPageSec02({data}) {
+export default function CareerPageSec031({data}) {
   return (
     <section className='bg-[#fcfcfc]'>
-      <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[40px] lg:pb-[86px]'>
+      <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[40px]'>
         <div className='flex w-full h-full'>
           {/* Content */}
           <Marquee 

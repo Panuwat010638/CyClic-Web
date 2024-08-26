@@ -16,7 +16,7 @@ export default function ContactPageSec01({data}) {
             </div>
             {/* Button */}
             <div className="group hidden lg:flex items-center gap-x-[14px]">
-                <Link className=" lg:text-[24px] text-[#161616] font-semibold leading-[130%] uppercase "
+                <Link className="text-[20px] lg:text-[24px] text-[#161616] font-semibold leading-[130%] uppercase "
                 href={data?.header?.button?.link} 
                 >
                   {data?.header?.button?.title}

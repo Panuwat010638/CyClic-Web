@@ -2,9 +2,9 @@ import client from '../../../client'
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import BlogPageSec01 from '@/components/BlogPage/BlogPageSec01';
-import BlogPageSec02 from '@/components/BlogPage/BlogPageSec02';
 import BlogPageSec03 from '@/components/BlogPage/BlogPageSec03';
 import BlogPageSec04 from '@/components/BlogPage/BlogPageSec04';
+import SlideTextTop from '@/components/SharedSections/SlideTextTop';
 
 
 export const revalidate = 10;
@@ -79,7 +79,7 @@ export default async function page() {
   return (
     <main>
         <BlogPageSec01 data={data[0]}/>
-        <BlogPageSec02 data={data[0]}/>
+        <SlideTextTop data={data[0]}/>
         <BlogPageSec03 highlight={highlight}/>
         <BlogPageSec04 data={data[0]} blog={blog} category={category}/>
     </main>

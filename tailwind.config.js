@@ -14,6 +14,7 @@ module.exports = {
       animation: {
         blob: "blob 5s infinite",
         infinitescroll: 'infinitescroll 25s linear infinite',
+        'spin-slow': 'spin 10s linear infinite',
 
       },
       keyframes: {

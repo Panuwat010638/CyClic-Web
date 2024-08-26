@@ -5,6 +5,7 @@ import ContactPageSec04 from '@/components/ContactPage/ContactPageSec04'
 import client from '../../../client'
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
+import SlideTextTop from '@/components/SharedSections/SlideTextTop'
 export const revalidate = 10;
 export const dynamicParams = true;
 
@@ -53,7 +54,7 @@ export default async function ContactPage() {
   return (
     <main>
         <ContactPageSec01 data={data[0]}/>
-        <ContactPageSec02 data={data[0]}/>
+        <SlideTextTop data={data[0]}/>
         <ContactPageSec03 data={data[0]}/>
         <ContactPageSec04/>
     </main>

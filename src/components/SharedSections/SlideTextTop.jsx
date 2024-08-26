@@ -1,7 +1,7 @@
 'use client'
 import Marquee from "react-fast-marquee";
 
-export default function ContactPageSec02({data}) {
+export default function SlideTextTop({data}) {
   return (
     <section className='bg-[#fcfcfc]'>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[40px] lg:pb-[86px]'>
@@ -15,7 +15,7 @@ export default function ContactPageSec02({data}) {
               className="flex items-center w-full py-4 lg:py-6 border-y-[2px] border-[#000000]">
                 {data?.slide?.map((item,index)=>(
                   <div key={index} className='flex items-center mr-[24px]'>
-                      <label className='font-pop text-[20px] lg:text-[24px] font-[500] text-[#161616] tracking-widest leading-[125%] mr-[24px] uppercase'>
+                      <label className='font-pop lg:text-[24px] font-[500] text-[#161616] tracking-widest leading-[125%] mr-[24px] uppercase'>
                         {item?.text} 
                       </label>
                       <svg className="min-w-[27px] min-h-[27px]" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
