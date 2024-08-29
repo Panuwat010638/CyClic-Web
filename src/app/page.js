@@ -68,6 +68,7 @@ export default async function Home() {
       <HomePageSec04ContentM data={data[0]?.service}/>
       <HomePageSec04ButtonM data={data[0]?.service}/>
       <HomePageSec06/>
+      
       <HomePageSec13 data={data[0]?.question}/>
       <SlideTextBottom data={data[0]}/>
     </main>
