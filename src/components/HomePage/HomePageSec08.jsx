@@ -5,6 +5,7 @@ import { useRef,useEffect,useState } from 'react';
 import { Image } from "@nextui-org/react";
 import imageUrlBuilder from '@sanity/image-url'
 import client from "../../../client";
+import { gsap } from 'gsap';
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
 const IBM =  IBM_Plex_Sans_Thai(
@@ -97,6 +98,16 @@ export default function HomePageSec08({data}) {
 }
 
 function ServiceItem({ item,index,on }) {
+    const [svgString, setSvgString] = useState('');
+    
+
+  useEffect(() => {
+    if (item?.svg) {
+      // เพิ่ม class หรือ id ให้กับส่วนประกอบของ SVG
+      const modifiedSvg = item.svg.replace('<svg', '<svg class="animate-svg"');
+      setSvgString(modifiedSvg);
+    }
+  }, [item?.svg]);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
     const lineVariants = {
@@ -135,7 +146,10 @@ function ServiceItem({ item,index,on }) {
     >
         <motion.div variants={contentVariants} className='flex items-center flex-col lg:flex-row w-full gap-[24px] lg:gap-[32px]'>
             <div className="flex justify-center lg:w-[160px]">
-                <div dangerouslySetInnerHTML={{ __html: item?.svg }} />
+                <motion.div dangerouslySetInnerHTML={{ __html: svgString }} 
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }} />
             </div>
             <div className='flex flex-col items-center lg:items-start lg:w-[calc(100%-192px)] gap-y-[8px]'>
                 <b className="text-[20px] sm:text-[36px] text-[#161616] font-normal leading-[125%] uppercase whitespace-pre-line">

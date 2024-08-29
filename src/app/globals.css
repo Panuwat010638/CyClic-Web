@@ -16,7 +16,17 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.animate-svg path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
 
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 /* a,
 p {
   color: #000;

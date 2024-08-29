@@ -54,7 +54,7 @@ export default function HomePageSec11({data,slidespeed = 0.8}) {
         return () => cancelAnimationFrame(animation);
     }, [animate]);
   return (
-    <section className="bg-white overflow-hidden">
+    <section className="bg-[#fcfcfc] overflow-hidden">
     <div className="max-w-full mx-auto py-[48px] lg:py-[80px]">
         <div className="flex flex-col justify-center items-center w-full h-full">
             <div className="overflow-hidden w-full">
