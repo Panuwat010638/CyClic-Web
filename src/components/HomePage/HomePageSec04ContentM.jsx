@@ -27,7 +27,7 @@ export default function HomePageSec04ContentM({data}) {
                 <div className='flex flex-col w-full sm:w-[592px] lg:w-full gap-y-[32px] lg:gap-y-[40px]'>
                 {data?.list?.map((item,index)=>(
                 
-                <ServiceItem key={index} item={item} index={index}/>
+                <ServiceItem key={index} item={item} index={index} on={index== data?.list?.length-1 ? false:true}/>
                 ))}
                 </div>
             </div>
@@ -36,7 +36,7 @@ export default function HomePageSec04ContentM({data}) {
   )
 }
 
-function ServiceItem({ item,index }) {
+function ServiceItem({ item,index,on }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
     const lineVariants = {
@@ -105,7 +105,7 @@ function ServiceItem({ item,index }) {
                 </div>
         </motion.div>
         <motion.svg 
-            className="w-full h-auto" 
+            className={`w-full h-auto ${on == true ? "block":"hidden lg:block"}`} 
             viewBox="0 0 729 2" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
