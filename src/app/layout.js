@@ -2,11 +2,10 @@ import "./globals.css";
 import groq from "groq";
 import { Inter } from "next/font/google";
 import client from "../../client";
-import Navbar from "@/components/Navbar/Navbar";
 import BGnavbar from "@/components/Navbar/BGnavbar";
 
 import GA from "./ga";
-import Menu from "@/components/Navbar/menu";
+import Menu from "@/components/Navbar/Menu";
 import Footer from "@/components/Footer/Footer";
 
   export const revalidate = 100;

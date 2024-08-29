@@ -15,7 +15,7 @@ function urlFor(source) {
 }
 
 
-export default function menu({data}) {
+export default function Menu({data}) {
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname =usePathname();
