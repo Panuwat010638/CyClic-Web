@@ -52,7 +52,7 @@ export default function HomePageSec13({data}) {
     };
   return (
     <section className='bg-[#fcfcfc]' ref={ref}>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 pb-[56px] lg:pb-[78px]'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 xl:px-0 py-[56px] lg:py-[78px]'>
         <div className='flex flex-col justify-center items-center w-full h-full gap-y-[32px] sm:gap-y-[56px] lg:gap-y-[78px]'>
           {/* Header */}
           <div className='flex justify-center lg:justify-between items-end w-full lg:gap-x-6'>

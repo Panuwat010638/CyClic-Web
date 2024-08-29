@@ -12,6 +12,7 @@ import HomePageSec04ContentM from '@/components/HomePage/HomePageSec04ContentM';
 import SlideTextBottom from '@/components/SharedSections/SlideTextBottom';
 import HomePageSec13 from '@/components/HomePage/HomePageSec13';
 import HomePageSec05 from '@/components/HomePage/HomePageSec05';
+import HomePageSec11 from '@/components/HomePage/HomePageSec11';
 
 export const revalidate = 10;
 export const dynamicParams = true;
@@ -70,7 +71,7 @@ export default async function Home() {
       <HomePageSec04ButtonM data={data[0]?.service}/>
       <HomePageSec05 data={data[0]?.experience}/>
       <HomePageSec06/>
-
+      <HomePageSec11 data={data[0]?.logo}/>
       <HomePageSec13 data={data[0]?.question}/>
       <SlideTextBottom data={data[0]}/>
     </main>
