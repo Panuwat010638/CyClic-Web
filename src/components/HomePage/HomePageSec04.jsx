@@ -122,7 +122,7 @@ export default function HomePageSec04({data}) {
   return (
 
 
-    <section ref={triggerRef} className="bg-[#fcfcfc] overflow-hidden hidden md:block">
+    <section ref={triggerRef} className="bg-[#fcfcfc] overflow-hidden hidden lg:block">
       <div ref={sectionRef} className="max-w-7xl mx-auto px-6 xl:px-0 py-[44px] lg:py-[72px]">
         <div className='flex flex-col justify-center items-center w-full h-full gap-y-[44px] lg:gap-y-[72px]'>
 

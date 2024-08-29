@@ -6,9 +6,9 @@ export default function HomePageSec04Header({data}) {
       <div className="max-w-7xl mx-auto px-6 xl:px-0">
         <div className='flex flex-col justify-center items-center w-full h-full gap-y-[44px] lg:gap-y-[72px]'>
           {/* Header */}
-          <div className='flex justify-between items-center w-full h-full lg:gap-x-6'>
+          <div className='flex justify-center lg:justify-between items-center w-full h-full lg:gap-x-6'>
             {/* Text */}
-            <div className="flex flex-col justify-center lg:justify-start gap-y-[16px]">
+            <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-y-[16px]">
               <div className="flex justify-center items-center rounded-[4px] bg-[#FB602F] py-[4px] w-[200px]">
                 <b className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
                   {data?.content?.subheader}
