@@ -85,7 +85,7 @@ export default function CareerSlugSec01({data}) {
                 <p className="text-[24px] lg:text-[36px] text-[#FB602F] font-semibold italic leading-[150%] uppercase">
                   We are looking for
                 </p>
-                <b className="text-[36px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
+                <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
                   {data?.title}
                 </b>
                 <p className="text-[16px] lg:text-[18px] text-[#161616] font-light leading-[130%] uppercase">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function BlogPageSec01({data}) {
+export default function WorkPageSec01({data}) {
   return (
     <section className=' bg-[#fcfcfc]'>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 py-[40px] lg:py-[56px]'>

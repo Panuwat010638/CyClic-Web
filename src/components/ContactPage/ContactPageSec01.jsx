@@ -10,7 +10,7 @@ export default function ContactPageSec01({data}) {
           <div className='flex justify-between items-center w-full h-full lg:gap-x-6'>
             {/* Text */}
             <div className="flex w-full lg:w-auto justify-center lg:justify-start">
-                <b className="text-[36px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start">
+                <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start">
                     {data?.header?.header}
                 </b>
             </div>

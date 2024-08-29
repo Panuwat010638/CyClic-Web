@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link"
-import CardBlog from "@/components/Cards/CardBlog"
+import CardWork from "@/components/Cards/CardWork"
 
-export default function BlogSlugSec03({blog}) {
+export default function WorkSlugPageSec06({work}) {
   return (
     <section className=' bg-[#fcfcfc]'>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[48px] lg:pb-[56px]'>
@@ -12,7 +12,7 @@ export default function BlogSlugSec03({blog}) {
             {/* Text */}
             <div className="flex">
                 <b className="text-[36px] sm:text-[56px] lg:text-[60px] text-center lg:text-start text-[#161616] font-extrabold leading-[125%] uppercase">
-                  related blog
+                  other project
                 </b>
             </div>
             {/* Button */}
@@ -28,9 +28,9 @@ export default function BlogSlugSec03({blog}) {
             </div>
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full sm:w-[592px] lg:w-full'>
-            {blog?.slice(0,3)?.map((item,index)=>(
-                <CardBlog key={index} item={item} index={index}/>
+          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 w-full sm:w-[592px] lg:w-full'>
+            {work?.slice(0,2)?.map((item,index)=>(
+                <CardWork key={index} item={item} index={index}/>
             ))}
           </div>
           {/* Button */}

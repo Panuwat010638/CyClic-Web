@@ -71,9 +71,9 @@ export default function menu({data}) {
                 width="100%" height="100%" quality={100}/>
           </Link>
         <div className="flex items-center gap-x-[24px] lg:gap-x-[40px]">
-          <Link href={data?.button?.link} className="flex justify-center items-center px-[24px] lg:px-[32px] py-[8px] lg:py-[13px] border-[2px] border-[#fcfcfc] hover:bg-[#FB602F]
+          <Link href={data?.button?.link} className="hidden sm:flex justify-center items-center px-[24px] lg:px-[32px] py-[8px] lg:py-[13px] border-[2px] border-[#fcfcfc] hover:bg-[#FB602F]
            transition-all duration-500 rounded-[50px]
-          lg:text-[18px] text-[#fcfcfc] font-semibold leading-[125%]">
+          lg:text-[18px] text-[#fcfcfc] font-semibold leading-[125%] uppercase">
             {data?.button?.title}
           </Link>
           <button
@@ -113,8 +113,8 @@ export default function menu({data}) {
           </Link>
   
           <div className="flex items-center gap-x-[24px] lg:gap-x-[40px]">
-          <Link href={data?.button?.link} className="flex justify-center items-center px-[24px] lg:px-[32px] py-[8px] lg:py-[13px] border-[2px] border-[#fcfcfc] hover:bg-[#FB602F]
-           transition-all duration-500 rounded-[50px]
+          <Link href={data?.button?.link} className="hidden sm:flex justify-center items-center px-[24px] lg:px-[32px] py-[8px] lg:py-[13px] border-[2px] border-[#fcfcfc] hover:bg-[#FB602F]
+           transition-all duration-500 rounded-[50px] uppercase
           lg:text-[18px] text-[#fcfcfc] font-semibold leading-[125%]">
             {data?.button?.title}
           </Link>
@@ -140,13 +140,13 @@ export default function menu({data}) {
         </div>
           </div>
           <div className="flex flex-col lg:flex-row w-full lg:w-[796px] h-[calc(100%-80px)] lg:justify-between items-center lg:items-end gap-[54px] lg:pb-[150px] gap-y-[48px]">
-            <div className="menu-links">
+            <div className="menu-links pt-[48px] sm:pb-0">
               {data?.menu.map((item,index) => {
                 return (
-                  <div className="group menu-link-item" key={item?.title+index}>
-                    <div className="menu-link-item-holder flex gap-x-6 items-center" onClick={toggleMenu}>
+                  <div className="group menu-link-item pb-[12px] sm:pb-0" key={item?.title+index}>
+                    <div className="menu-link-item-holder flex gap-x-6 items-center uppercase" onClick={toggleMenu}>
                       <div className={`${pathname == item?.href ? "bg-[#FB602F]":"bg-[#252A39] group-hover:bg-[#FB602F]"} transition-all duration-500 min-w-[23px] min-h-[23px] rounded-full`}/>
-                      <Link href={item?.href} className={`${pathname == item?.href ? "text-[#ffffff] font-semibold italic":"text-[#BEBEBE] group-hover:text-[#ffffff] font-light"} transform transition-all duration-500 text-[48px] leading-[125%]`}>
+                      <Link href={item?.href} className={`${pathname == item?.href ? "text-[#ffffff] font-semibold italic uppercase":"text-[#BEBEBE] group-hover:text-[#ffffff] font-light uppercase"} transform transition-all duration-500 text-[24px] sm:text-[48px] leading-[125%]`}>
                         {item?.title}
                       </Link>
                     </div>

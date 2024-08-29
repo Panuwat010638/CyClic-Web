@@ -34,6 +34,7 @@ export default function CardBlog({index,item}) {
             src={urlFor(item?.mainImage?.image).format('webp').url()}
             placeholder="blur"
             alt={item?.mainImage?.alt}
+            blurDataURL={urlFor(item?.mainImage?.image).width(10).quality(20).blur(10).url()}
             width="100%" height="100%" />
         </div>
         <div className="flex w-full justify-center items-center">

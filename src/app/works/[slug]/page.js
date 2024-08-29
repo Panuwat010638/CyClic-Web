@@ -1,9 +1,13 @@
 import client from "../../../../client"
 import groq from "groq"
 import imageUrlBuilder from '@sanity/image-url'
-import BlogSlugSec01 from "@/components/BlogPage/slug/BlogSlugSec01";
-import BlogSlugSec02 from "@/components/BlogPage/slug/BlogSlugSec02";
-import BlogSlugSec03 from "@/components/BlogPage/slug/BlogSlugSec03";
+import WorkSlugPageSec01 from "@/components/WorkPage/Slug/WorkSlugPageSec01";
+import WorkSlugPageSec02 from "@/components/WorkPage/Slug/WorkSlugPageSec02";
+import WorkSlugPageSec03 from "@/components/WorkPage/Slug/WorkSlugPageSec03";
+import WorkSlugPageSec04 from "@/components/WorkPage/Slug/WorkSlugPageSec04";
+import WorkSlugPageSec05 from "@/components/WorkPage/Slug/WorkSlugPageSec05";
+import WorkSlugPageSec06 from "@/components/WorkPage/Slug/WorkSlugPageSec06";
+
 
 export const revalidate = 10;
 export const dynamicParams = true;
@@ -16,7 +20,7 @@ function urlFor(source) {
 export async function getStaticParams({ params, searchParams }, parent) {
   
     const pathsTH = [] = await client.fetch(
-    `*[_type == "blog" && defined(slug.currenct)][].slug.current`
+    `*[_type == "work" && defined(slug.currenct)][].slug.current`
     )
     return pathsTH.map(path => ({
         slug: decodeURIComponent(path.toString())
@@ -28,26 +32,28 @@ async function getPosts(params) {
    
     const slug  = decodeURIComponent(params.slug)
 
-        const query = groq`*[_type == "blog" && slug.slug.current == '${slug}'][0]{
+        const query = groq`*[_type == "work" && slug.slug.current == '${slug}'][0]{
             title,
-            mainImage,
+            header,
+            images,
+            content,
             slug,
-            detail,
-            body,
             date,
+            seo,
             "category":category->title,
-            "headings": body[length(style) == 2 && string::startsWith(style, "h2")]
         }`
           const posts = await client.fetch(query, slug)
-        const queryBlog = groq`*[_type == "blog" && slug.slug.current != '${slug}'] | order(_createdAt desc){
-            title,
-            mainImage,
+        const queryBlog = groq`*[_type == "work" && slug.slug.current != '${slug}'] | order(_createdAt desc){
+            header,
+            images,
+            content,
             slug,
             date,
+            seo,
             "category":category->title,
         }`
           const postsBlog = await client.fetch(queryBlog)
-          const blog = postsBlog.sort((a, b) => {
+          const work = postsBlog.sort((a, b) => {
               const dateA = new Date(a.date);
               const dateB = new Date(b.date);
               return dateB - dateA;
@@ -55,7 +61,7 @@ async function getPosts(params) {
 
       
           return {
-              props: { posts,blog }
+              props: { posts,work }
            
           }
    
@@ -64,7 +70,7 @@ async function getPosts(params) {
 export async function generateMetadata({ params, searchParams }, parent) {
 
     const slug  = decodeURIComponent(params.slug);
-    const query = groq`*[_type == 'blog' && slug.slug.current == '${slug}'][0]`
+    const query = groq`*[_type == 'work' && slug.slug.current == '${slug}'][0]`
     const post = await client.fetch(query)
     const ogImageUrl = post?.seo?.openGraphImage != undefined ? urlFor(post?.seo?.openGraphImage).width(1200).height(630).fit('scale').auto('format').format('webp').url():null;
     return {
@@ -72,7 +78,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
       description: post.seo?.description,
       keywords: post.seo?.keywords,
       alternates: {
-        canonical: `/blog/${post?.slug?.slug?.current}`,
+        canonical: `/works/${post?.slug?.slug?.current}`,
         },
         openGraph: {
             title: post.seo?.titletag,
@@ -81,18 +87,21 @@ export async function generateMetadata({ params, searchParams }, parent) {
             type: 'website',
             authors: ['Cy-Click Business Solution']
           }
-    }
+        }
     }
 
-export default async function BlogSlugpage({params}) {
+export default async function WorkSlugpage({params}) {
     const posts = await getPosts(params);
     const data = posts.props.posts;
-    const blog = posts.props.blog;
+    const work = posts.props.work;
   return (
     <main>
-        <BlogSlugSec01 data={data}/>
-        <BlogSlugSec02 data={data}/>
-        <BlogSlugSec03 blog={blog}/>
+        <WorkSlugPageSec01 data={data}/>
+        <WorkSlugPageSec02 data={data}/>
+        <WorkSlugPageSec03 data={data}/>
+        <WorkSlugPageSec04 data={data}/>
+        <WorkSlugPageSec05 data={data}/>
+        <WorkSlugPageSec06 work={work}/>
     </main>
   )
 }

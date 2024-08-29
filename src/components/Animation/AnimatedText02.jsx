@@ -1,9 +1,7 @@
 'use client';
 
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useEffect, useRef,useState } from "react";
-
-
+import { useEffect, useRef } from "react";
 
 export default function AnimatedText02({
   text,
@@ -16,12 +14,13 @@ export default function AnimatedText02({
   activeIndex,
   repeatDelay,
   delay = 0,
-  animationType = 'character', 
+  animationType = 'character',
 }) {
   const controls = useAnimation();
   const textArray = Array.isArray(text) ? text : [text];
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5, once });
+
   const animation = {
     hidden: {
       opacity: 0,
@@ -56,14 +55,14 @@ export default function AnimatedText02({
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView, controls,activeIndex]);
+  }, [isInView, controls, activeIndex]);
 
   const renderContent = () => {
     switch (animationType) {
       case 'sentence':
         return textArray.map((line, lineIndex) => (
           <motion.span
-            key={`${line}-${lineIndex}`}
+            key={`${line}-${lineIndex}-${activeIndex}`}
             className="block"
             variants={animation}
           >
@@ -72,10 +71,10 @@ export default function AnimatedText02({
         ));
       case 'word':
         return textArray.map((line, lineIndex) => (
-          <span className="block" key={`${line}-${lineIndex}`}>
+          <span className="block" key={`${line}-${lineIndex}-${activeIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
               <motion.span
-                key={`${word}-${wordIndex}`}
+                key={`${word}-${wordIndex}-${activeIndex}`}
                 className="inline-block"
                 variants={animation}
               >
@@ -87,12 +86,12 @@ export default function AnimatedText02({
       case 'character':
       default:
         return textArray.map((line, lineIndex) => (
-          <span className="block" key={`${line}-${lineIndex}`}>
+          <span className="block" key={`${line}-${lineIndex}-${activeIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
-              <span className="inline-block" key={`${word}-${wordIndex}`}>
+              <span className="inline-block" key={`${word}-${wordIndex}-${activeIndex}`}>
                 {word.split("").map((char, charIndex) => (
                   <motion.span
-                    key={`${char}-${charIndex}`}
+                    key={`${char}-${charIndex}-${activeIndex}`}
                     className="inline-block"
                     variants={animation}
                   >
