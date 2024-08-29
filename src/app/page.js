@@ -15,6 +15,7 @@ import HomePageSec05 from '@/components/HomePage/HomePageSec05';
 import HomePageSec11 from '@/components/HomePage/HomePageSec11';
 import HomePageSec08 from '@/components/HomePage/HomePageSec08';
 import HomePageSec10 from '@/components/HomePage/HomePageSec10';
+import HomePageSec12 from '@/components/HomePage/HomePageSec12';
 
 export const revalidate = 10;
 export const dynamicParams = true;
@@ -78,6 +79,7 @@ export default async function Home() {
 
       <HomePageSec10 data={data[0]?.review}/>
       <HomePageSec11 data={data[0]?.logo}/>
+      <HomePageSec12/>
       <HomePageSec13 data={data[0]?.question}/>
       <SlideTextBottom data={data[0]}/>
     </main>
