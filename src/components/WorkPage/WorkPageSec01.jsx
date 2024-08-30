@@ -14,7 +14,7 @@ export default function WorkPageSec01({data}) {
                 </b>
             </div>
             {/* Sub */}
-            <p className='hidden lg:flex text-[16px] font-normal text-[#161616] leading-[125%]'>
+            <p className='hidden lg:flex text-[16px] font-normal text-[#161616] uppercase leading-[125%]'>
               {data?.header?.subheader}
             </p>
             

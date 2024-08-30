@@ -81,7 +81,7 @@ export default function CareerPageSec04({data}) {
                 y1="0"
                 x2="0"
                 y2="100%"
-                stroke="black"
+                stroke="#939393"
                 strokeWidth="1"
                 variants={lineVariants}
               />
@@ -101,7 +101,7 @@ export default function CareerPageSec04({data}) {
                   y1="0"
                   x2="100%"
                   y2="0"
-                  stroke="black"
+                  stroke="#939393"
                   strokeWidth="1"
                   variants={lineVariants}
                 />
@@ -120,7 +120,7 @@ export default function CareerPageSec04({data}) {
                 y1="0"
                 x2="100%"
                 y2="0"
-                stroke="black"
+                stroke="#939393"
                 strokeWidth="1"
                 variants={lineVariants}
               />
@@ -139,7 +139,7 @@ export default function CareerPageSec04({data}) {
                   y1="0"
                   x2="0"
                   y2="100%"
-                  stroke="black"
+                  stroke="#939393"
                   strokeWidth="1"
                   variants={lineVariants}
                 />

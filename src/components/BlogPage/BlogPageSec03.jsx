@@ -135,7 +135,7 @@ export default function BlogPageSec03({highlight}) {
                       once={true}
                       animationType="character"
                       text={highlight[activeIndex]?.category}
-                      className={`text-[16px] text-[#161616] font-normal leading-[150%]`}
+                      className={`text-[16px] text-[#161616] font-normal leading-[150%] uppercase`}
                       repeatDelay={0}
                     />
                   </div>

@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 export default function BlogPageSec02({data}) {
   return (
     <section className='bg-[#fcfcfc]'>
-      <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[40px] lg:pb-[54px]'>
+      <div className='max-w-7xl mx-auto xl:px-0 pb-[40px] lg:pb-[54px]'>
         <div className='flex w-full h-full'>
           {/* Content */}
           <Marquee 

@@ -6,6 +6,7 @@ import client from '../../../client'
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import SlideTextTop from '@/components/SharedSections/SlideTextTop'
+import HomePageSec12 from '@/components/HomePage/HomePageSec12'
 export const revalidate = 10;
 export const dynamicParams = true;
 
@@ -55,6 +56,7 @@ export default async function ContactPage() {
         <SlideTextTop data={data[0]}/>
         <ContactPageSec03 data={data[0]}/>
         <ContactPageSec04/>
+        <HomePageSec12/>
     </main>
   )
 }

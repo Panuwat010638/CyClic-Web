@@ -43,7 +43,7 @@ export default function HomePageSec12() {
       }
     };
   return (
-    <section className='bg-[#fcfcfc] scroll-m-[100px]' id='ContactForm'>
+    <section className='bg-[#fcfcfc] scroll-mt-[100px]'>
         <div className="max-w-full mx-auto">
             <div className="flex flex-col justify-center items-center w-full h-full">
 
