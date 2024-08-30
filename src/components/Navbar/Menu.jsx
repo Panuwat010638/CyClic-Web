@@ -16,10 +16,20 @@ function urlFor(source) {
 
 
 export default function Menu({data}) {
+  const [scrollPosition, setScrollPosition] = useState(0);
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname =usePathname();
-  console.log(pathname)
+  
+  useEffect(() => {
+    // เพิ่ม event listener เมื่อ component ถูก mount
+    window.addEventListener('scroll', handleScroll);
+
+    // ลบ event listener เมื่อ component ถูก unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   /*GSAP*/
   const tl = useRef();
 
@@ -48,7 +58,9 @@ export default function Menu({data}) {
     },
     { scope: container }
   );
-
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+  };
   useEffect(() => {
     if (isMenuOpen) {
       tl.current.play();
@@ -58,7 +70,7 @@ export default function Menu({data}) {
   }, [isMenuOpen]);
 
   return (
-    <nav className={`${pathname == '/'? "bg-transparent":"bg-[#252A39]"} w-screen fixed top-0 z-[50]`} ref={container}>
+    <nav className={`${scrollPosition > 40 ? "bg-[#252A39]":pathname == '/'? "bg-transparent":"bg-[#252A39]"} w-screen fixed top-0 z-[50]`} ref={container}>
       <div className='max-w-7xl mx-auto px-6 xl:px-0'>
       <div className='flex justify-between bg-transparent  items-center min-w-full w-full h-[80px] lg:gap-x-[100px]'>
           <Link href={`/`} className='col-span-3 flex w-[81px] justify-center items-center relative '>
