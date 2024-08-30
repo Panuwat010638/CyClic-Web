@@ -83,7 +83,7 @@ export default async function Home() {
       <HomePageSec04ContentM data={data[0]?.service}/>
       <HomePageSec04ButtonM data={data[0]?.service}/>
       <HomePageSec05 data={data[0]?.experience}/>
-      <HomePageSec06 work={work}/>
+      <HomePageSec06 work={work} data={data[0]?.works} data2={data[0]?.business}/>
       <HomePageSec08 data={data[0]?.solutions}/>
       {/* Video */}
       <HomePageSec10 data={data[0]?.review}/>

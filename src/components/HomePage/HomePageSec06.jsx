@@ -4,7 +4,7 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 import CardWorkInHome from '../Cards/CardWorkInHome';
-export default function HomePageSec06({work}) {
+export default function HomePageSec06({work,data,data2}) {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { 
@@ -53,35 +53,35 @@ export default function HomePageSec06({work}) {
     }
   };
 
-const data = {
-  content:{
-    subheader:'Big idea ',
-    header:'our works',
-    title:'brought to business'
-  },
-  button:{
-    title:'Explore our works',
-    link:'/works'
-  },
-  list:[
-    {title:'Enhanced\nproductivity',detail:'with intuitive design and development tools.'},
-    {title:'Robust CMS',detail:'Harnesses the power of a robust content management system..'},
-    {title:'Exceptional speed',detail:'Experience exceptional website speed that keeps your visitors engaged.'},
-    {title:'Ease of use',detail:'The website’s user-friendly interface and visual design capabilities.'},
-    {title:'No plugins',detail:'we eliminate the need for third-party add-ons.'},
-    {title:'Unlimited scalability',detail:'Future-proof your online presence with our ensuring your website can grow alongside your business.'},
-  ]
-}
-const data2 = {
-  content:{
-    header:'website & \nbusiness Intelligence',
-  },
-  button:{
-    title:'find more our works',
-    link:'/works'
-  },
+// const data1 = {
+//   content:{
+//     subheader:'Big idea ',
+//     header:'our works',
+//     title:'brought to business'
+//   },
+//   button:{
+//     title:'Explore our works',
+//     link:'/works'
+//   },
+//   list:[
+//     {title:'Enhanced\nproductivity',detail:'with intuitive design and development tools.'},
+//     {title:'Robust CMS',detail:'Harnesses the power of a robust content management system..'},
+//     {title:'Exceptional speed',detail:'Experience exceptional website speed that keeps your visitors engaged.'},
+//     {title:'Ease of use',detail:'The website’s user-friendly interface and visual design capabilities.'},
+//     {title:'No plugins',detail:'we eliminate the need for third-party add-ons.'},
+//     {title:'Unlimited scalability',detail:'Future-proof your online presence with our ensuring your website can grow alongside your business.'},
+//   ]
+// }
+// const data2 = {
+//   content:{
+//     header:'website & \nbusiness Intelligence',
+//   },
+//   button:{
+//     title:'find more our works',
+//     link:'/works'
+//   },
 
-}
+// }
 const ListSection = ({ items, className }) => (
   <motion.div 
     className={className}

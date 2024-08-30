@@ -17,7 +17,7 @@ const IBM =  IBM_Plex_Sans_Thai(
   });
 
 export default function HomePageSec08({data}) {
-    console.log(data)
+  
   return (
     <section className="bg-[#fcfcfc]">
         <div className='max-w-7xl mx-auto px-6 xl:px-0 pt-[40px] pb-[56px] lg:pb-[88px] lg:pt-[86px]'>
