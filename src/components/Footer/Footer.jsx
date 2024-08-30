@@ -120,11 +120,11 @@ export default function Footer({data}) {
                         <div className="flex flex-col items-center lg:items-end lg:justify-start w-full lg:w-[48%] h-full">
                             {data?.word.map((item,index)=>(
 
-                            <Link key={index} href={`${item?.href}`} 
+                            <b key={index}
                             className={`${item?.status== true ? "text-[#FB602F] font-medium italic":"text-[#ffffff] font-extralight"} text-[24px] lg:text-[18px] xl:text-[24px] uppercase leading-[150%] 
                                 transition-colors duration-500`}>
                               {item?.title}
-                            </Link>
+                            </b>
 
                             ))}  
                         </div>

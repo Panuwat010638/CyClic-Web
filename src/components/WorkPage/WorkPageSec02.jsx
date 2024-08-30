@@ -2,7 +2,7 @@
 import { useState,useEffect } from "react"
 import {Card, CardBody, CardFooter,Pagination,Skeleton } from '@nextui-org/react'
 import CardWork from "../Cards/CardWork";
-
+import { Select, SelectItem } from "@nextui-org/react";
 export default function WorkPageSec02({category,work}) {
     const [cat,setCat]=useState('All');
   const itemsPerPage = 12;
@@ -46,6 +46,10 @@ export default function WorkPageSec02({category,work}) {
   useEffect(() => {
      window.scrollTo({ top: 0});
   }, [currentPage]);
+  const options = [
+    { key: 'All', label: 'All' },
+    ...category.map(item => ({ key: item.title, label: item.title }))
+  ];
   return (
     <section className='bg-[#fcfcfc]'>
     <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[36px] sm:pb-[48px] lg:pb-[54px]'>
@@ -67,6 +71,24 @@ export default function WorkPageSec02({category,work}) {
             </button>
           ))}
         </div>
+        <div className="flex lg:hidden justify-center items-center w-full sm:w-[592px]">
+          <Select 
+            variant={"bordered"}
+            className="max-w-full h-[48px]"
+            defaultSelectedKeys={["All"]}
+            classNames={{base:'h-[48px]',mainWrapper:'h-[48px]',trigger:'h-[48px] border-[#161616]'}}
+            radius="full"
+            value={cat}
+            onChange={(e) => setCat(e.target.value)}
+          >
+            {options.map((option) => (
+              <SelectItem key={option.key} value={option.key}>
+                {option.label}
+              </SelectItem>
+            ))}
+          </Select>
+        </div>
+        
 
         {isLoading 
               ? (<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-[24px] lg:gap-y-[32px] sm:gap-x-[24px] w-full sm:w-[592px] lg:w-full'>
