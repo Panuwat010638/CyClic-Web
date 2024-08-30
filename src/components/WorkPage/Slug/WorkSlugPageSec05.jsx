@@ -39,7 +39,7 @@ export default function WorkSlugPageSec05({data}) {
                 <h2 className="text-[20px] lg:text-[24px] text-[#161616] font-extrabold leading-[100%] uppercase">
                     {data?.images?.contentImage?.header}
                 </h2>
-                <p className={`text-[18px] text-[#161616] font-normal leading-[150%] uppercase`}>
+                <p className={`text-[18px] text-[#161616] font-normal leading-[150%] `}>
                   {data?.images?.contentImage?.detail}
                 </p>
 
@@ -50,7 +50,7 @@ export default function WorkSlugPageSec05({data}) {
                 <b className="text-[20px] lg:text-[24px] text-[#161616] font-extrabold leading-[100%] uppercase">
                     {data?.images?.contentImage?.header}
                 </b>
-                <p className={`text-[18px] text-[#161616] font-normal leading-[150%] uppercase`}>
+                <p className={`text-[18px] text-[#161616] font-normal leading-[150%] `}>
                   {data?.images?.contentImage?.detail}
                 </p>
             </div>

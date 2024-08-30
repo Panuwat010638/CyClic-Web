@@ -85,7 +85,7 @@ function ServiceItem({ item,index }) {
             {item?.title}
           </b>
           <div className="flex items-center w-full gap-x-[16px]">
-              <p className={`${IBM.className} text-[16px] text-[#161616] font-normal leading-[130%]`}>
+              <p className={`${IBM.className} text-[16px] lg:text-[18px] text-[#161616] font-normal leading-[150%]`}>
                   {item?.detail}
               </p>
           </div>
@@ -93,7 +93,7 @@ function ServiceItem({ item,index }) {
         {/* List */}
         <ul className="flex flex-col w-full lg:w-[calc(100%-694px)] gap-y-[4px] list-disc marker:text-[#161616] marker:text-[12px] pl-4">
           {item?.list?.map((item,index)=>(
-            <li key={index} className="text-[18px] text-[#161616] font-normal leading-[150%] uppercase italic">
+            <li key={index} className="text-[18px] text-[#161616] font-normal leading-[150%] italic">
                 {item?.text}
             </li>
           ))}
