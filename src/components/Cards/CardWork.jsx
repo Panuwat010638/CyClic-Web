@@ -26,7 +26,7 @@ export default function CardWork({index,item}) {
             <Image quality={100} className=" object-cover object-center w-full h-full rounded-[16px]" 
             classNames={{wrapper:"object-cover w-full h-full rounded-[16px]"}}
             radius="none"
-            src={urlFor(item?.images?.mainImage?.image).url()}
+            src={urlFor(item?.images?.mainImage?.image).format('webp').url()}
             placeholder="blur"
             alt={item?.images?.mainImage?.alt}
             width="100%" height="100%" />
