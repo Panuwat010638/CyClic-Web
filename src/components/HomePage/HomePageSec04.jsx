@@ -158,7 +158,7 @@ export default function HomePageSec04({data}) {
                 <div
                   key={index}
                   ref={el => dotsRef.current[index] = el}
-                  className="w-3 h-3 rounded-full absolute top-1/2 -translate-y-1/2"
+                  className="w-6 h-6 rounded-full absolute top-1/2 -translate-y-1/2"
                   style={{
                     left: `${index * 33.33}%`,
                     backgroundColor: index === 0 ? '#FB602F' : '#BEBEBE'

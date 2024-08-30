@@ -104,19 +104,7 @@ function ServiceItem({ item,index,on }) {
                   </p>
                 </div>
         </motion.div>
-        <motion.svg 
-            className={`w-full h-auto ${on == true ? "block":"hidden lg:block"}`} 
-            viewBox="0 0 729 2" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            variants={contentVariants}
-          >
-            <motion.path 
-              d="M0 1L729 1.00006" 
-              stroke="#939393" 
-              variants={lineVariants}
-            />
-          </motion.svg>
+        
       </motion.article>
     );
   }

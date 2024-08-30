@@ -50,8 +50,8 @@ export default function HomePageSec12() {
                 {/* Content */}
                 <div className="flex flex-col lg:flex-row w-full sm:w-[592px] lg:w-full h-full lg:h-[720px]">
                     <div className="flex justify-center items-center w-full lg:w-[50%] lg:h-full">
-                        <Image quality={100} className=" object-cover object-center w-full h-full" 
-                        classNames={{wrapper:"object-cover w-full h-full"}}
+                        <Image quality={100} className=" object-contain lg:object-cover object-center w-full h-full" 
+                        classNames={{wrapper:"object-contain lg:object-cover w-full h-full"}}
                         radius="none"
                         src={fo01.src}
                         placeholder="blur"
@@ -89,6 +89,7 @@ export default function HomePageSec12() {
                                     label="Name"
                                     variant="underlined"
                                     value={name}
+                                    classNames={{label:'text-[18px] text-[#161616]'}}
                                     onChange={(e) => setName(e.target.value)}
                                     isInvalid={!!errors.name}
                                     errorMessage={errors.name}
@@ -97,6 +98,7 @@ export default function HomePageSec12() {
                                   <Input
                                     label="E-mail"
                                     variant="underlined"
+                                    classNames={{label:'text-[18px] text-[#161616]'}}
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     isInvalid={!!errors.email}
@@ -106,6 +108,7 @@ export default function HomePageSec12() {
                                   <Input
                                     label="Tel"
                                     variant="underlined"
+                                    classNames={{label:'text-[18px] text-[#161616]'}}
                                     value={tel}
                                     onChange={(e) => setTel(e.target.value)}
                                     isInvalid={!!errors.tel}
@@ -114,9 +117,10 @@ export default function HomePageSec12() {
                           
                                       <Select 
                                         variant={"underlined"}
-                                        label="Interested Service"
-                                        placeholder="Select a service"
+                                   
+                                        placeholder=" Select interested service"
                                         className="max-w-full"
+                                        classNames={{label:'text-[18px] text-[#161616]',value:'text-[#161616] text-[18px] font-normal',popoverContent:"text-[#161616] text-[16px] font-normal"}}
                                         value={service}
                                         onChange={(e) => setService(e.target.value)}
                                         isInvalid={!!errors.service}
@@ -131,9 +135,9 @@ export default function HomePageSec12() {
                                  
 
                                 <div className='group flex justify-center ss:justify-start items-center gap-x-[14px] pb-[20px] w-full ss:w-auto pt-[24px]'>
-                                    <button type="submit" className='flex justify-center items-center px-[24px] lg:px-[32px] py-[8px] lg:py-[13px] border-[2px] border-[#161616] hover:bg-[#FB602F]
+                                    <button type="submit" className='flex justify-center items-center px-[24px] lg:px-[32px] py-[8px] lg:py-[13px] border-[2px] border-[#161616] hover:bg-[#161616]
                                         transition-all duration-500 rounded-[50px]
-                                        lg:text-[18px] text-[#161616] font-semibold leading-[125%] uppercase' >
+                                        lg:text-[18px] text-[#161616] hover:text-[#fcfcfc] font-semibold leading-[125%] uppercase' >
                                         Get a Proposal
                                     </button>
                                 </div>

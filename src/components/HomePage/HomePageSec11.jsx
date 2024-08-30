@@ -55,7 +55,7 @@ export default function HomePageSec11({data,slidespeed = 0.8}) {
     }, [animate]);
   return (
     <section className="bg-[#fcfcfc] overflow-hidden">
-    <div className="max-w-full mx-auto py-[48px] lg:py-[80px]">
+    <div className="max-w-full mx-auto py-[48px] lg:py-[64px]">
         <div className="flex flex-col justify-center items-center w-full h-full">
             <div className="overflow-hidden w-full">
                 <div 

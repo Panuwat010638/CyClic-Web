@@ -91,7 +91,7 @@ export default function WorkPageSec02({category,work}) {
         
 
         {isLoading 
-              ? (<div className='grid grid-cols-1 sm:grid-cols-2 gap-y-[24px] lg:gap-y-[32px] sm:gap-x-[24px] w-full sm:w-[592px] lg:w-full'>
+              ? (<div className='grid grid-cols-1 lg:grid-cols-2 gap-y-[24px] lg:gap-y-[32px] sm:gap-x-[24px] w-full sm:w-[592px] lg:w-full'>
                 {Array(itemsPerPage).fill().map((_, index) => (
                     <Card shadow="sm" className="bg-[#FFFFFF] rounded-t-[16px]" key={index}>
                      <CardBody className="overflow-visible p-0">
@@ -109,7 +109,7 @@ export default function WorkPageSec02({category,work}) {
                    ))}
               </div>
                 )
-              : ( <div className='grid grid-cols-1 sm:grid-cols-2  gap-[32px] lg:gap-6 w-full sm:w-[592px] lg:w-full'>
+              : ( <div className='grid grid-cols-1 lg:grid-cols-2  gap-[32px] lg:gap-6 w-full sm:w-[592px] lg:w-full'>
                 {workfilter?.slice(startIndex, endIndex)?.map((item,index)=>(
                     <CardWork key={index} item={item} index={index}/>
                 ))}

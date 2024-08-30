@@ -21,8 +21,8 @@ const IBM =  IBM_Plex_Sans_Thai(
 export default function CardWorkInHome({index,item}) {
   return (
     <div className="flex flex-col gap-y-[20px] w-full rounded-t-[16px] relative" key={index}>
-        <div className="flex justify-center items-center w-full h-[320px] lg:h-[353px] rounded-[16px]">
-            <Image quality={100} className=" object-cover object-center w-full h-full rounded-[16px]" 
+        <div className="flex justify-center items-center w-full h-[190px] ss:h-[250px] sm:h-[320px] lg:h-[353px] rounded-[16px]">
+            <Image quality={100} className=" object-cover object-center w-full h-full rounded-[16px] " 
             classNames={{wrapper:"object-cover w-full h-full rounded-[16px]"}}
             radius="none"
             src={urlFor(item?.images?.mainImage?.image).format('webp').url()}
@@ -35,12 +35,12 @@ export default function CardWorkInHome({index,item}) {
               <h3 className={`text-[20px] lg:text-[24px] text-[#fcfcfc] font-semibold uppercase leading-[125%]`}>
                 {item?.header?.header}
               </h3>
-              <p className="text-[16px] text-[#fcfcfc] font-normal leading-[125%]">
+              <p className="text-[16px] text-[#fcfcfc] uppercase font-normal leading-[125%]">
                   {item?.category}
               </p>
             </div>
             <div className="flex flex-col justify-center items-start w-full gap-y-[12px]">
-              <p className="text-[16px] text-[#BEBEBE] font-light italic leading-[125%]">
+              <p className="text-[16px] lg:text-[18px] text-[#BEBEBE] font-light italic leading-[125%]">
                   {item?.header?.type}
               </p>
             </div>

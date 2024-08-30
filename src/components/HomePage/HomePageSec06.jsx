@@ -207,7 +207,7 @@ const ListSection = ({ items, className }) => (
             </div>
 
             {/* Content */}
-            <div className='grid grid-cols-1 sm:grid-cols-2  gap-[32px] lg:gap-6 w-full sm:w-[592px] lg:w-full'>
+            <div className='grid grid-cols-1 lg:grid-cols-2  gap-[32px] lg:gap-6 w-full sm:w-[592px] lg:w-full'>
                 {work?.slice(0, 4)?.map((item,index)=>(
                     <CardWorkInHome key={index} item={item} index={index}/>
                 ))}

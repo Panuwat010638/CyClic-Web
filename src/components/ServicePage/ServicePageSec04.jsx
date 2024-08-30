@@ -147,7 +147,7 @@ export default function ServicePageSec04({data}) {
             {data?.content?.slice(0,6).map((item,index) => (
               <motion.article
                 key={index}
-                className='relative flex flex-col items-center w-full sm:h-[490px] sm:w-[calc(50%)] lg:w-[calc(33.33%)] gap-y-[16px] sm:gap-y-[24px] lg:gap-y-[32px] px-4 py-[24px] sm:py-[40px] lg:py-[40px]'
+                className='relative flex flex-col items-center w-full sm:h-[490px] sm:w-[calc(50%)] lg:w-[calc(33.33%)] gap-y-[16px] sm:gap-y-[24px] lg:gap-y-[32px] px-[32px] lg:px-[40px] py-[24px] sm:py-[40px] lg:py-[40px]'
                 variants={contentVariants}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
@@ -161,7 +161,7 @@ export default function ServicePageSec04({data}) {
                   <h3 className={`${IBM.className} text-[20px] lg:text-[24px] lg:h-[62.4px] text-[#161616] font-semibold leading-[130%] uppercase`}>
                     {item?.question}
                   </h3>
-                  <p className={`${IBM.className} text-[16px] text-[#161616] font-normal leading-[130%]`}>
+                  <p className={`${IBM.className} text-[16px] text-[#161616] font-normal leading-[150%]`}>
                     {item?.answers}
                   </p>
                 </div>
