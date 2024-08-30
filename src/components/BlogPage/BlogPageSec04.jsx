@@ -1,6 +1,6 @@
 'use client'
 import { useState,useEffect } from "react"
-import {Card, CardBody, CardFooter,Pagination,Skeleton } from '@nextui-org/react'
+import {Card, CardBody, CardFooter,Pagination,Skeleton,Select, SelectItem } from '@nextui-org/react'
 import CardBlog from "../Cards/CardBlog";
 export default function BlogPageSec04({data,category,blog}) {
   const [cat,setCat]=useState('All');
@@ -45,6 +45,10 @@ export default function BlogPageSec04({data,category,blog}) {
   useEffect(() => {
      window.scrollTo({ top: 0});
   }, [currentPage]);
+  const options = [
+    { key: 'All', label: 'All' },
+    ...category.map(item => ({ key: item.title, label: item.title }))
+  ];
   return (
     <section className='bg-[#fcfcfc]'>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[36px] sm:pb-[48px] lg:pb-[54px]'>
@@ -81,6 +85,23 @@ export default function BlogPageSec04({data,category,blog}) {
                 {item?.title}
               </button>
             ))}
+          </div>
+          <div className="flex lg:hidden justify-center items-center w-full sm:w-[592px]">
+            <Select 
+              variant={"bordered"}
+              className="max-w-full h-[48px]"
+              defaultSelectedKeys={["All"]}
+              classNames={{base:'h-[48px]',mainWrapper:'h-[48px]',trigger:'h-[48px] border-[#161616]'}}
+              radius="full"
+              value={cat}
+              onChange={(e) => setCat(e.target.value)}
+            >
+              {options.map((option) => (
+                <SelectItem key={option.key} value={option.key}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </Select>
           </div>
 
           {isLoading 
