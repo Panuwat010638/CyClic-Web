@@ -76,7 +76,7 @@ export default function WorkPageSec02({category,work}) {
             variant={"bordered"}
             className="max-w-full h-[48px]"
             defaultSelectedKeys={["All"]}
-            classNames={{base:'h-[48px]',mainWrapper:'h-[48px]',trigger:'h-[48px] border-[#161616]'}}
+            classNames={{base:'h-[48px]',mainWrapper:'h-[48px]',trigger:'h-[48px] border-[#161616]',value:'text-[#161616] text-[18px] font-normal uppercase'}}
             radius="full"
             value={cat}
             onChange={(e) => setCat(e.target.value)}
