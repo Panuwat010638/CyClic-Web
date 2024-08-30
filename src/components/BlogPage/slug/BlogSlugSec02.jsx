@@ -88,7 +88,7 @@ export default function BlogSlugSec02({data}) {
                   Back to Blog
               </Link>
               <div className="flex justify-center lg:justify-start items-center w-full gap-x-[24px]">
-                <p className="text-[16px] text-[#161616] font-semibold leading-[125%]">
+                <p className="text-[16px] text-[#161616] font-semibold leading-[125%] uppercase">
                     {data?.category}
                 </p>
                 <svg className="min-w-[2px] min-h-[27px]" width="2" height="27" viewBox="0 0 2 27" fill="none" xmlns="http://www.w3.org/2000/svg">

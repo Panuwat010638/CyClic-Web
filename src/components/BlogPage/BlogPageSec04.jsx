@@ -123,7 +123,7 @@ export default function BlogPageSec04({data,category,blog}) {
                      ))}
                 </div>
                   )
-                : ( <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] lg:gap-6 w-full sm:w-[592px] lg:w-full'>
+                : ( <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full sm:w-[592px] lg:w-full'>
                   {blogfilter?.slice(startIndex, endIndex)?.map((item,index)=>(
                       <CardBlog key={index} item={item} index={index}/>
                   ))}
@@ -141,8 +141,8 @@ export default function BlogPageSec04({data,category,blog}) {
                         item: "text-[#FF5941] rounded-full mx-2 w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent drop-shadow-none shadow-none transition-all duration-300",
                         cursor:
                           "text-[#fcfcfc] bg-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] ",
-                        next:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent transition-all duration-300",
-                        prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent  transition-all duration-300",
+                        next:"text-[#FF5941] data-[disabled=true]:border-[#BEBEBE] data-[disabled=true]:text-[#BEBEBE] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent transition-all duration-300",
+                        prev:"text-[#FF5941] data-[disabled=true]:border-[#BEBEBE] data-[disabled=true]:text-[#BEBEBE] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent  transition-all duration-300",
                         }}
                       page={currentPage}
                       onChange={setCurrentPage}
@@ -158,8 +158,8 @@ export default function BlogPageSec04({data,category,blog}) {
                       item: "text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent drop-shadow-none shadow-none transition-all duration-300",
                       cursor:
                         "text-[#fcfcfc] bg-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] ",
-                      next:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent transition-all duration-300",
-                      prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent  transition-all duration-300",
+                      next:"text-[#FF5941] data-[disabled=true]:border-[#BEBEBE] data-[disabled=true]:text-[#BEBEBE] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent transition-all duration-300",
+                      prev:"text-[#FF5941] data-[disabled=true]:border-[#BEBEBE] data-[disabled=true]:text-[#BEBEBE] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent  transition-all duration-300",
                       }}
                     page={currentPage}
                     onChange={setCurrentPage}

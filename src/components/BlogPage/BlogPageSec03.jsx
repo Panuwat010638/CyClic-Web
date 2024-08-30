@@ -135,16 +135,16 @@ export default function BlogPageSec03({highlight}) {
                       once={true}
                       animationType="character"
                       text={highlight[activeIndex]?.category}
-                      className={`text-[16px] text-[#161616] font-normal leading-[125%]`}
+                      className={`text-[16px] text-[#161616] font-normal leading-[150%]`}
                       repeatDelay={0}
                     />
                   </div>
                   {/* Right */}
                   <div className="flex justify-center lg:justify-start items-center gap-x-[24px]">
                     {activeIndex==0 ? (
-                      <svg className="min-w-[48px] min-h-[48px] brightness-50" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M28 34L18 24L28 14" stroke="#FF5941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <circle cx="24" cy="24" r="23.5" stroke="#FF5941"/>
+                      <svg className="min-w-[48px] min-h-[48px]" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M28 34L18 24L28 14" stroke="#BEBEBE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="24" cy="24" r="23.5" stroke="#BEBEBE"/>
                     </svg>
                     )
                     :(

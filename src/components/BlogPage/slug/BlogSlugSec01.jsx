@@ -26,7 +26,7 @@ export default function BlogSlugSec01({data}) {
           <div className='flex justify-between items-end w-full h-full lg:gap-x-6'>
             {/* Text */}
             <div className="flex">
-                <b className="text-[20px] sm:text-[36px] lg:text-[48px] text-[#161616] font-extrabold leading-[125%] uppercase">
+                <b className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#161616] font-extrabold leading-[125%] uppercase">
                     {data?.title}
                 </b>
             </div>

@@ -170,7 +170,7 @@ export default function ServicePageSec03({category,work,data}) {
                               {/* Right */}
                               <div className="hidden lg:flex justify-center lg:justify-start items-center lg:w-[120px] gap-x-[24px]">
                                   {activeIndex==0 ? (
-                                    <svg className="min-w-[48px] min-h-[48px] brightness-50" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg className="min-w-[48px] min-h-[48px] " width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M28 34L18 24L28 14" stroke="#BEBEBE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <circle cx="24" cy="24" r="23.5" stroke="#BEBEBE"/>
                                   </svg>
