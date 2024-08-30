@@ -16,6 +16,7 @@ import HomePageSec11 from '@/components/HomePage/HomePageSec11';
 import HomePageSec08 from '@/components/HomePage/HomePageSec08';
 import HomePageSec10 from '@/components/HomePage/HomePageSec10';
 import HomePageSec12 from '@/components/HomePage/HomePageSec12';
+import HomePageSec07 from '@/components/HomePage/HomePageSec07';
 
 export const revalidate = 10;
 export const dynamicParams = true;
@@ -29,9 +30,18 @@ async function getPosts() {
 
     const query = groq`*[_type == "HomePage"  ] | order(_createdAt desc)`
     const posts = await client.fetch(query)
-
+    const queryHighlight = groq`*[_type == "work" ] | order(_createdAt asc){
+      header,
+      images,
+      content,
+      slug,
+      date,
+      seo,
+      "category":category->title,
+  }`
+  const work = await client.fetch(queryHighlight )
       return {
-          props: { posts},revalidate: 60
+          props: { posts,work},revalidate: 60
        
       }
 }
@@ -62,7 +72,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function Home() {
   const posts = await getPosts();
   const data = posts.props.posts;
-
+  const work = posts.props.work;
   return (
     <main>
       <HomePageSec01 data={data[0]?.banner}/>
@@ -73,10 +83,9 @@ export default async function Home() {
       <HomePageSec04ContentM data={data[0]?.service}/>
       <HomePageSec04ButtonM data={data[0]?.service}/>
       <HomePageSec05 data={data[0]?.experience}/>
-      <HomePageSec06/>
-
+      <HomePageSec06 work={work}/>
       <HomePageSec08 data={data[0]?.solutions}/>
-
+      {/* Video */}
       <HomePageSec10 data={data[0]?.review}/>
       <HomePageSec11 data={data[0]?.logo}/>
       <HomePageSec12/>

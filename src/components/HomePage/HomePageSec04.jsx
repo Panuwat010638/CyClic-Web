@@ -122,8 +122,8 @@ export default function HomePageSec04({data}) {
   return (
 
 
-    <section ref={triggerRef} className="bg-[#fcfcfc] overflow-hidden hidden lg:block">
-      <div ref={sectionRef} className="max-w-7xl mx-auto px-6 xl:px-0 py-[44px] lg:py-[72px]">
+    <section ref={triggerRef} className="bg-[#fcfcfc] overflow-hidden hidden lg:block pt-[72px]">
+      <div ref={sectionRef} className="max-w-7xl mx-auto px-6 xl:px-0 py-[44px] lg:pb-[72px]">
         <div className='flex flex-col justify-center items-center w-full h-full gap-y-[44px] lg:gap-y-[72px]'>
 
           {/* Content Desktop */}
@@ -133,7 +133,7 @@ export default function HomePageSec04({data}) {
                 <div 
                   key={index} 
                   ref={el => imageRefs.current[index] = el} 
-                  className="lg:w-[calc(25%-18px)] flex flex-col justify-center items-center flex-shrink-0 lg:h-[420px] relative"
+                  className="lg:w-[calc(25%-18px)] flex flex-col justify-center items-center flex-shrink-0 lg:h-[380px] relative"
                 >
                   <div className=" w-full h-full overflow-hidden rounded-lg">
                     <Image quality={100} className="object-cover  object-center w-full h-full rounded-[16px]" 
