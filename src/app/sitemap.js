@@ -7,32 +7,10 @@ export const dynamic = 'force-dynamic'
 export const revalidate = 10
 
 export default async function sitemap() {
-    const queryNews = groq`*[_type == "blog" && category->title != "aquarium" ] | order(publishedAt desc){
-        language,
-        slug,
-        publishedAt,
-    }`
 
-    const getSortedPostDataN = await client.fetch(queryNews,{ next: { revalidate: 10 } });
-    const news = getSortedPostDataN.map(({ slug, publishedAt }) => ({
-        url: `${URL}/news/${decodeURIComponent(slug.slug.current)}`,
-        lastModified: publishedAt,
-    }))
-    const queryNewsA = groq`*[_type == "blog" && category->title == "aquarium"] | order(publishedAt desc){
-        language,
-        slug,
-        publishedAt,
-    }`
-
-    const getSortedPostDataNA = await client.fetch(queryNewsA,{ next: { revalidate: 10 } });
-    const Anews = getSortedPostDataNA.map(({ slug, publishedAt }) => ({
-        url: `${URL}/aquarium/news/${decodeURIComponent(slug.slug.current)}`,
-        lastModified: publishedAt,
-    }))
     ///////////////////////////////////////////////////////////////////////////////////////
 
-    const queryBlog = groq`*[_type == "blog" && category->title != "aquarium" ] | order(publishedAt desc){
-        language,
+    const queryBlog = groq`*[_type == "blog"] | order(publishedAt desc){
         slug,
         publishedAt,
     }`
@@ -42,48 +20,34 @@ export default async function sitemap() {
         url: `${URL}/blog/${decodeURIComponent(slug.slug.current)}`,
         lastModified: publishedAt,
     }))
-    const queryBlogA = groq`*[_type == "blog" && category->title == "aquarium"] | order(publishedAt desc){
-        language,
+    const queryCare = groq`*[_type == "career"] | order(publishedAt desc){
         slug,
         publishedAt,
     }`
 
-    const getSortedPostDataA = await client.fetch(queryBlogA,{ next: { revalidate: 10 } });
-    const Ablog = getSortedPostDataA.map(({ slug, publishedAt }) => ({
-        url: `${URL}/aquarium/blog/${decodeURIComponent(slug.slug.current)}`,
+    const getSortedPostDataC = await client.fetch(queryCare,{ next: { revalidate: 10 } });
+    const care = getSortedPostDataC.map(({ slug, publishedAt }) => ({
+        url: `${URL}/career/${decodeURIComponent(slug.slug.current)}`,
+        lastModified: publishedAt,
+    }))
+    const queryWork = groq`*[_type == "work"] | order(publishedAt desc){
+        slug,
+        publishedAt,
+    }`
+
+    const getSortedPostDataW = await client.fetch(queryWork,{ next: { revalidate: 10 } });
+    const work = getSortedPostDataW.map(({ slug, publishedAt }) => ({
+        url: `${URL}/works/${decodeURIComponent(slug.slug.current)}`,
         lastModified: publishedAt,
     }))
 
-////////////////////////////////////////////////////////// 
-const queryreviews = groq`*[_type == "products" && category->title != "aquarium" ] | order(publishedAt desc){
-    language,
-    slug,
-    publishedAt,
-}`
-const getSortedreviewsData = await client.fetch(queryreviews,{ next: { revalidate: 10 } });
-
-const product = getSortedreviewsData.map(({ slug, publishedAt }) => ({
-    url: `${URL}/product/${decodeURIComponent(slug.slug.current)}`,
-    lastModified: publishedAt,
-}))
-const queryreviewsA = groq`*[_type == "products" && category->title == "aquarium" ] | order(publishedAt desc){
-    language,
-    slug,
-    publishedAt,
-}`
-const getSortedreviewsDataA = await client.fetch(queryreviewsA,{ next: { revalidate: 10 } });
-
-const Aproduct = getSortedreviewsDataA.map(({ slug, publishedAt }) => ({
-    url: `${URL}/product/${decodeURIComponent(slug.slug.current)}`,
-    lastModified: publishedAt,
-}))
 
 ////////////////////////////////////////////////////////// 
 
-    const routes = ["", "/about","/contact","/product","/product/dog","/product/cat","/news","/blog","/aquarium","/aquarium/about","/aquarium/blog","/aquarium/news","/aquarium/product","/aquarium/contact"].map((route) => ({
+    const routes = ["","/blog","/career","/contact","service","/works"].map((route) => ({
         url: `${URL}${route}`,
         lastModified: new Date().toISOString(),
     }));
 
-    return [...routes, ...blog,...product,...Aproduct,...Ablog,...Anews,...news];
+    return [...routes, ...blog,...care,...work];
 }
