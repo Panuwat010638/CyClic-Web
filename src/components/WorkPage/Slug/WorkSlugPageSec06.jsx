@@ -18,7 +18,7 @@ export default function WorkSlugPageSec06({work}) {
             {/* Button */}
             <div className="group hidden lg:flex items-center gap-x-[14px]">
                 <Link className="sm:text-[18px] lg:text-[24px] text-[#161616] font-semibold leading-[130%] uppercase"
-                href={`/blog`} 
+                href={`/works`} 
                 >
                   view all
                 </Link>
@@ -36,7 +36,7 @@ export default function WorkSlugPageSec06({work}) {
           {/* Button */}
           <div className="group flex lg:hidden items-center gap-x-[14px]">
                 <Link className="text-[24px] text-[#161616] font-semibold leading-[130%] uppercase"
-                href={`/blog`} 
+                href={`/works`} 
                 >
                   view all
                 </Link>
