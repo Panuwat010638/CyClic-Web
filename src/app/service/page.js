@@ -6,7 +6,7 @@ import SlideTextTop from '@/components/SharedSections/SlideTextTop';
 import ServicePageSec02 from '@/components/ServicePage/ServicePageSec02';
 import ServicePageSec03 from '@/components/ServicePage/ServicePageSec03';
 import ServicePageSec04 from '@/components/ServicePage/ServicePageSec04';
-
+import CRMLoyaltyPrograms from '@/components/test';
 
 
 export const revalidate = 10;
