@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server'
 export async function POST(req) {
   const { name, email, tel, service } = await req.json()
 
-  const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message/push'
-  const LINE_USER_ID = process.env.LINE_USER_ID
+  const LINE_MESSAGING_API = 'https://api.line.me/v2/bot/message/multicast'
+  const LINE_USER_ID = process.env.LINE_USER_ID.split(',').map(id => id.trim())
   const LINE_CHANNEL_ACCESS_TOKEN = process.env.LINE_CHANNEL_ACCESS_TOKEN
 
   const body = JSON.stringify({
