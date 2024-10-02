@@ -1,4 +1,4 @@
-import client from '../../../client'
+import client from '../../../../../client';
 import groq from 'groq'
 import imageUrlBuilder from '@sanity/image-url'
 import WorkPageSec01 from '@/components/WorkPage/WorkPageSec01';
@@ -57,15 +57,16 @@ export async function generateMetadata({ params, searchParams }, parent) {
   }
   }
 
-export default async function Workspage() {
+
+export default async function page({params}) {
     const posts = await getPosts();
     const data = posts.props.posts;
     const category = posts.props.category;
     const work = posts.props.work;
   return (
     <main>
-        <WorkPageSec01 data={data[0]}/>
-        <WorkPageSec02 category={category} work={work}/>
+        <WorkPageSec01 data={data[0]} />
+        <WorkPageSec02 category={category} work={work} params={params}/>
     </main>
   )
 }

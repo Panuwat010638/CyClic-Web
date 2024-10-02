@@ -3,8 +3,10 @@ import { useState,useEffect } from "react"
 import {Card, CardBody, CardFooter,Pagination,Skeleton } from '@nextui-org/react'
 import CardWork from "../Cards/CardWork";
 import { Select, SelectItem } from "@nextui-org/react";
-export default function WorkPageSec02({category,work}) {
-    const [cat,setCat]=useState('All');
+import { useRouter } from "next/navigation";
+export default function WorkPageSec02({category,work,params}) {
+  const route = useRouter();
+  const [cat,setCat]=useState('All');
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [startIndex,setStartIndex]=useState(0)
@@ -21,17 +23,35 @@ export default function WorkPageSec02({category,work}) {
     }
     setCurrentPage(1);
     
+
     // Simulate loading
     setIsLoading(true)
     setTimeout(() => {
         setIsLoading(false)
     }, 1000) // Simulating a 1.5 second load time
 }, [cat]);
+
+useEffect(() => {
+  if(params?.number == undefined){
+    setCurrentPage(1);
+  }else if(params?.number == 1){
+    route.push('/works')
+  }else {
+    setCurrentPage(Number(params.number))
+  }// Simulating a 1.5 second load time
+}, [params]);
+
   //Pagination
   useEffect(() => {
       const cur = Number(currentPage-1);
       const startIndex = cur * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
+      if(currentPage!=1){
+        route?.push(`/works/page/${currentPage}`)
+      }else{
+        route?.push(`/works`)
+      }
+
       setStartIndex(startIndex)
       setEndIndex(endIndex)
       // Simulate loading
@@ -153,6 +173,7 @@ export default function WorkPageSec02({category,work}) {
                    />
               </div> 
               ):null}
+              
       </div>
     </div>
   </section>

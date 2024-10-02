@@ -2,7 +2,9 @@
 import { useState,useEffect } from "react"
 import {Card, CardBody, CardFooter,Pagination,Skeleton,Select, SelectItem } from '@nextui-org/react'
 import CardBlog from "../Cards/CardBlog";
-export default function BlogPageSec04({data,category,blog}) {
+import { useRouter } from "next/navigation";
+export default function BlogPageSec04({data,category,blog,params}) {
+  const route = useRouter();
   const [cat,setCat]=useState('All');
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
@@ -10,6 +12,7 @@ export default function BlogPageSec04({data,category,blog}) {
   const [endIndex,setEndIndex]=useState(0)
   const [blogfilter,setFilterblog]=useState(blog||[])
   const [isLoading, setIsLoading] = useState(true)
+  
   //Filter Catagory
   useEffect(() => {
     if(cat == "All"){
@@ -31,14 +34,29 @@ export default function BlogPageSec04({data,category,blog}) {
       const cur = Number(currentPage-1);
       const startIndex = cur * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
+      if(currentPage!=1){
+        route?.push(`/blog/page/${currentPage}`)
+      }else{
+        route?.push(`/blog`)
+      }
       setStartIndex(startIndex)
       setEndIndex(endIndex)
+      
       // Simulate loading
       setIsLoading(true)
       setTimeout(() => {
           setIsLoading(false)
       }, 1000) // Simulating a 1.5 second load time
   }, [currentPage]);
+  useEffect(() => {
+    if(params?.number == undefined){
+      setCurrentPage(1);
+    }else if(params?.number == 1){
+      route.push('/blog')
+    }else {
+      setCurrentPage(Number(params.number))
+    }
+  }, [params]);
   const lengthData = blogfilter?.length
   const result = parseInt(lengthData / itemsPerPage);
   const result2 = parseInt(lengthData % itemsPerPage);
