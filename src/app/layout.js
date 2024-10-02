@@ -62,7 +62,7 @@ return {
   title: 'Cy-Click Business Solution' ,
   description: 'Cy-Click Business Solution',
   keywords:'Cy-Click Business Solution',
-  metadataBase: new URL('https://www.cy-click.com/'),
+  metadataBase: new URL('https://www.cyclic.co.th/'),
   robots: {
     index: true,
     follow: true,
@@ -76,8 +76,15 @@ return {
       'max-snippet': -1,
     },
   },
-  authors: [{ name: 'Cy-Click Business Solution', url: 'https://www.cy-click.com/' }],
-  creator: 'C',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+  },
+  authors: [{ name: 'Cy-Click Business Solution', url: 'https://www.cyclic.co.th/' }],
+  creator: 'Cy-Click Business Solution',
   publisher: 'Cy-Click Business Solution',
   verification: {
     google: gsc?.title,
