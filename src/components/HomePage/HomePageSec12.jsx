@@ -11,10 +11,10 @@ export default function HomePageSec12() {
     const [service, setService] = useState('');
     const [errors, setErrors] = useState({});
     const options = [
-        {key: "Business CONSULTING", label: "Business CONSULTING"},
-        {key: "marketing research", label: "marketing research"},
-        {key: "business Intelligence", label: "business Intelligence"},
-        {key: "Software Development", label: "Software Development"},
+        {key: "BUSINESS CONSULTING", label: "BUSINESS CONSULTING"},
+        {key: "MARKETING RESEARCH", label: "MARKETING RESEARCH"},
+        {key: "BUSINESS INTELLIGENCE", label: "BUSINESS INTELLIGENCE"},
+        {key: "SOFTWARE DEVELOPMENT", label: "SOFTWARE DEVELOPMENT"},
 
     ]
     const validateForm = () => {
@@ -35,11 +35,35 @@ export default function HomePageSec12() {
       return Object.keys(newErrors).length === 0;
     };
   
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
       e.preventDefault();
       if (validateForm()) {
-        console.log({ name, email, tel, service });
-        // Handle form submission
+        try {
+          const response = await fetch('/api/line', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, tel, service }),
+          });
+    
+          if (!response.ok) {
+            throw new Error('Failed to send message');
+          }
+    
+          const result = await response.json();
+          console.log('Message sent successfully:', result);
+          // Reset form fields
+          setName('');
+          setEmail('');
+          setTel('');
+          setService('');
+          // Show success message to user
+          alert('ข้อมูลของคุณถูกส่งเรียบร้อยแล้ว!');
+        } catch (error) {
+          console.error('Error sending message:', error);
+          alert('เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง');
+        }
       }
     };
   return (
