@@ -40,7 +40,7 @@ export default function ServicePageSec03({category,work,data}) {
                 <div className="hidden xl:flex items-center justify-between w-full gap-x-[24px]">
                     <div className="flex items-center w-full gap-x-[16px]">
                     {category?.map((item,index)=>(
-                      <Link href={`/works?${item?.title}`} key={item?.title+` index: ${index}`} className={`flex justify-center bg-[#fcfcfc] hover:bg-[#FFB69E] 
+                      <Link href={`/works/category/${item?.title}`} key={item?.title+` index: ${index}`} className={`flex justify-center bg-[#fcfcfc] hover:bg-[#FFB69E] 
                       items-center lg:w-auto lg:px-4 transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px] 
                       lg:text-[18px] text-[#000000] font-normal leading-[125%] uppercase`}>
                         {item?.title}
