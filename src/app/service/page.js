@@ -70,7 +70,7 @@ export default async function Servicepage() {
     <main>
         <ServicePageSec01 data={data[0]}/>
         <SlideTextTop data={data[0]}/>
-        <ServicePageSec02 data={data[0]?.service}/>
+        <ServicePageSec02 data={data[0]?.service} data2={data[0]}/>
         <ServicePageSec03 data={data[0]} work={work} category={category}/>
         <ServicePageSec04 data={data[0]?.question}/>
     </main>
