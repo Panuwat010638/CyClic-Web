@@ -8,7 +8,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],

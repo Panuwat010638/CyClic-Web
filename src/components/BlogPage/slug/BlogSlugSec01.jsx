@@ -4,7 +4,7 @@ import client from "../../../../client";
 import imageUrlBuilder from '@sanity/image-url'
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
     { 
       weight: ['100','200','300','400','500','600', '700'],
       style: ['normal'],
@@ -19,7 +19,7 @@ const builder = imageUrlBuilder(client)
 
 export default function BlogSlugSec01({data}) {
   return (
-    <section className={`bg-[#fcfcfc] ${IBM.className}`}>
+    <section className={`bg-[#fcfcfc] ${ibm.className}`}>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pt-[40px] lg:pt-[56px] pb-[24px] sm:pb-[36px] lg:pb-[48px]'>
         <div className='flex flex-col justify-center items-end w-full h-full gap-y-[24px] sm:gap-y-[36px] lg:gap-y-[48px]'>
           {/* Header */}

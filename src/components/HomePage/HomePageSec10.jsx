@@ -6,7 +6,7 @@ import client from "../../../client";
 import { Image } from "@nextui-org/react";
 import imageUrlBuilder from '@sanity/image-url'
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -111,7 +111,7 @@ export default function HomePageSec10({data}) {
                         {data?.list.map((item,index)=>(
                         <div key={index} style={{ transform: `translateX(-${activeIndex * 120}%)` }}
                             className="flex flex-col justify-between min-w-[400px] lg:min-w-[500px] px-[24px] py-[32px] gap-y-[24px] transition-all  ease-in-out duration-500">
-                            <p className={`${IBM.className} text-[16px] text-[#000000] font-[400] leading-[150%]`}>
+                            <p className={`${ibm.className} text-[16px] text-[#000000] font-[400] leading-[150%]`}>
                                 {item?.text}
                             </p>
                             <div className="flex items-center gap-x-[18px]">
@@ -126,7 +126,7 @@ export default function HomePageSec10({data}) {
                                     width="100%" height="100%" />
                                 </div>
                                 <div className="flex flex-col gap-y-[2px] w-[calc(100%-94px)] justify-center">
-                                    <label className="text-[16px] text-[#161616] font-semibold leading-[150%]">{item?.name}</label>
+                                    <label className={`${ibm.className} text-[16px] text-[#161616] font-semibold leading-[150%]`}>{item?.name}</label>
                                     <label className="text-[16px] text-[#939393] font-normal leading-[150%]">{item?.role}</label>
                                 </div>
                             </div>
@@ -142,7 +142,7 @@ export default function HomePageSec10({data}) {
                         {data?.list.map((item,index)=>(
                         <div key={index} style={{ transform: `translateX(-${activeIndex2 * 100}%)` }}
                             className="flex flex-col justify-between min-w-full px-[24px] py-[32px] gap-y-[24px] transition-all  ease-in-out duration-500">
-                            <p className={`${IBM.className} text-[16px] text-[#000000] font-[400] leading-[150%]`}>
+                            <p className={`${ibm.className} text-[16px] text-[#000000] font-[400] leading-[150%]`}>
                                 {item?.text}
                             </p>
                             <div className="flex justify-center items-center gap-x-[18px]">

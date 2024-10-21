@@ -148,8 +148,8 @@ useEffect(() => {
                       item: "text-[#FF5941] rounded-full mx-2 w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent drop-shadow-none shadow-none transition-all duration-300",
                       cursor:
                         "text-[#fcfcfc] bg-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] ",
-                      next:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent transition-all duration-300",
-                      prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent  transition-all duration-300",
+                      next:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] data-[disabled=true]:border-default-300 data-[disabled=true]:text-default-300 bg-transparent transition-all duration-300",
+                      prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] data-[disabled=true]:border-default-300 data-[disabled=true]:text-default-300  bg-transparent  transition-all duration-300",
                       }}
                     page={currentPage}
                     onChange={setCurrentPage}
@@ -165,8 +165,8 @@ useEffect(() => {
                     item: "text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent drop-shadow-none shadow-none transition-all duration-300",
                     cursor:
                       "text-[#fcfcfc] bg-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] ",
-                    next:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent transition-all duration-300",
-                    prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] bg-transparent  transition-all duration-300",
+                    next:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] data-[disabled=true]:border-default-300 data-[disabled=true]:text-default-300 bg-transparent transition-all duration-300",
+                    prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] data-[disabled=true]:border-default-300 data-[disabled=true]:text-default-300 bg-transparent  transition-all duration-300",
                     }}
                   page={currentPage}
                   onChange={setCurrentPage}

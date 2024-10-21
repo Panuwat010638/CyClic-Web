@@ -11,7 +11,7 @@ const builder = imageUrlBuilder(client)
 function urlFor(source) {
   return builder.image(source)
 }
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -99,7 +99,7 @@ function ServiceItem({ item,index,on }) {
                   <h3 className="text-[18px] lg:text-[20px] font-semibold text-[#161616] leading-[125%] uppercase">
                     {item.title}
                   </h3>
-                  <p className={`${IBM.className} text-[16px] lg:text-[18px] text-[#161616] leading-[150%] font-normal text-center`}>
+                  <p className={`${ibm.className} text-[16px] lg:text-[18px] text-[#161616] leading-[150%] font-normal text-center`}>
                     {item.detail}
                   </p>
                 </div>

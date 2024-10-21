@@ -4,6 +4,15 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 import Link from 'next/link';
 import CardWorkInHome from '../Cards/CardWorkInHome';
+import { IBM_Plex_Sans_Thai } from "next/font/google";
+
+const ibm =  IBM_Plex_Sans_Thai(
+  { 
+    weight: ['100','200','300','400','500','600', '700'],
+    style: ['normal'],
+    subsets: ['latin'],
+    display: 'swap',
+  });
 export default function HomePageSec06({work,data,data2}) {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -104,7 +113,7 @@ const ListSection = ({ items, className }) => (
           <b className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-light italic leading-[130%] lg:whitespace-pre-line'>
             {item?.title}
           </b>
-          <p className='text-[16px] lg:text-[18px] text-[#BEBEBE] font-light leading-[130%] italic'>
+          <p className={`${ibm.className} text-[16px] lg:text-[18px] text-[#BEBEBE] font-light leading-[130%] italic`}>
             {item?.detail}
           </p>
         </div>
@@ -157,7 +166,7 @@ const ListSection = ({ items, className }) => (
               className='hidden lg:flex flex-col w-full lg:w-[calc(50%-274px)] gap-y-[32px] lg:gap-y-[44px] xl:gap-y-[56px]'
             />
               {/* 3D */}
-              <div ref={ref} className="flex items-center justify-center w-[300px] lg:w-[500px] h-[650px]  overflow-hidden">
+              <div ref={ref} className="flex items-center justify-center w-[300px] lg:w-[500px] z-0 relative right-6 h-[600px]">
                 <motion.div
                   initial="hidden"
                   animate={controls}
@@ -165,7 +174,7 @@ const ListSection = ({ items, className }) => (
                   variants={containerVariants}
                 >
                   <motion.div className='w-full h-full' animate="float" variants={floatVariants}>
-                    <Spline scene="https://prod.spline.design/15aI9d85Nq3JB7lZ/scene.splinecode" />
+                    <Spline scene="https://draft.spline.design/lpE7fO0UWGIzMw50/scene.splinecode" autoHideCursor={false}/>
                   </motion.div>
                 </motion.div>
               </div>

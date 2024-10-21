@@ -11,7 +11,7 @@ const builder = imageUrlBuilder(client)
 function urlFor(source) {
   return builder.image(source)
 }
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],

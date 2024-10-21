@@ -8,7 +8,7 @@ import client from "../../../client";
 import { gsap } from 'gsap';
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -156,7 +156,7 @@ function ServiceItem({ item,index,on }) {
                 <b className="text-[20px] sm:text-[36px] text-[#161616] font-normal leading-[125%] uppercase whitespace-pre-line">
                     {item?.title}
                 </b>
-                <p className={`${IBM.className} text-[18px] text-[#161616] leading-[150%] font-normal text-center lg:text-start`}>
+                <p className={`${ibm.className} text-[18px] text-[#161616] leading-[150%] font-normal text-center lg:text-start`}>
                   {item?.detail}
                 </p>
             </div>

@@ -6,7 +6,7 @@ import client from "../../../client";
 import imageUrlBuilder from '@sanity/image-url'
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 import AnimatedText02 from "../Animation/AnimatedText02";
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -85,7 +85,7 @@ export default function BlogPageSec03({highlight}) {
                     once={true}
                     animationType="character"
                     text={highlight[activeIndex]?.title}
-                    className={`lg:text-[24px] text-[#161616] font-semibold leading-[125%] ${IBM.className}`}
+                    className={`lg:text-[24px] text-[#161616] font-semibold leading-[125%] ${ibm.className}`}
                     repeatDelay={0}
                   />
                   <AnimatedText02
@@ -96,7 +96,7 @@ export default function BlogPageSec03({highlight}) {
                     delay={0.2}
                     once={true}
                     text={highlight[activeIndex]?.detail}
-                    className={`lg:text-[16px] text-[#161616] font-normal leading-[125%] ${IBM.className}`}
+                    className={`lg:text-[16px] text-[#161616] font-normal leading-[125%] ${ibm.className}`}
                     repeatDelay={0}
                     duration={0.5}
                     animationType="sentence"

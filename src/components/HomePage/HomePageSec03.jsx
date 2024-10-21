@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from "next/link";
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -59,7 +59,7 @@ export default function HomePageSec03({data}) {
                         </div>
                         {/* Detail */}
                         <div className='flex w-full justify-center lg:justify-start'>
-                          <p className={`${IBM.className} text-[18px] text-[#161616] leading-[150%] font-normal text-center lg:text-start`}>
+                          <p className={`${ibm.className} text-[18px] text-[#161616] leading-[150%] font-normal text-center lg:text-start`}>
                             {data?.content?.detail}
                           </p>
                         </div>

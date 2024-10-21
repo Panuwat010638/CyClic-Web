@@ -9,7 +9,7 @@ const builder = imageUrlBuilder(client)
 function urlFor(source) {
   return builder.image(source)
 }
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -38,7 +38,7 @@ export default function CardBlog({index,item}) {
             width="100%" height="100%" />
         </div>
         <div className="flex w-full justify-center items-center">
-          <h3 className={`lg:text-[16px] text-[#161616] font-semibold leading-[125%] ${IBM.className}`}>
+          <h3 className={`lg:text-[16px] text-[#161616] font-semibold leading-[125%] ${ibm.className}`}>
             {item?.title}
           </h3>
         </div>

@@ -16,7 +16,7 @@ const builder = imageUrlBuilder(client)
 function urlFor(source) {
   return builder.image(source)
 }
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -176,7 +176,7 @@ export default function HomePageSec04({data}) {
                   <h3 className="text-[20px] font-semibold text-[#161616] leading-[125%] uppercase">
                     {section.title}
                   </h3>
-                  <p className={`${IBM.className} text-[18px] text-[#161616] leading-[150%] font-normal`}>
+                  <p className={`${ibm.className} text-[18px] text-[#161616] leading-[150%] font-normal`}>
                     {section.detail}
                   </p>
                 </div>

@@ -9,7 +9,7 @@ const builder = imageUrlBuilder(client)
 function urlFor(source) {
   return builder.image(source)
 }
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -50,7 +50,7 @@ export default function WorkSlugPageSec02({data}) {
                 <h1 className="text-[36px] lg:text-[48px] text-[#FB602F] font-extrabold leading-[100%] uppercase">
                     {data?.header?.header}
                 </h1>
-                <p className={`text-[18px] text-[#161616] font-normal leading-[150%] uppercase ${IBM.className}`}>
+                <p className={`text-[18px] text-[#161616] font-normal leading-[150%] uppercase ${ibm.className}`}>
                   {data?.header?.detail}
                 </p>
                 <ul className="flex flex-col w-full gap-y-[4px] list-disc marker:text-[#161616] marker:text-[12px] pl-4">

@@ -11,7 +11,7 @@ function urlFor(source) {
   return builder.image(source)
 }
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
     { 
       weight: ['100','200','300','400','500','600', '700'],
       style: ['normal'],
@@ -157,10 +157,10 @@ export default function HomePageSec13({data}) {
                    <b className='text-[40px] lg:text-[60px] text-[#FB602F]  font-extrabold leading-[125%] uppercase'>
                        {`0${index+1}.`}
                    </b>
-                  <h3 className={`${IBM.className} text-[20px] lg:text-[24px] lg:h-[62.4px] text-[#161616] font-semibold leading-[130%] uppercase`}>
+                  <h3 className={`${ibm.className} text-[20px] lg:text-[24px] lg:h-[62.4px] text-[#161616] font-semibold leading-[130%] uppercase`}>
                     {item?.question}
                   </h3>
-                  <p className={`${IBM.className} text-[16px] text-[#161616] font-normal leading-[150%]`}>
+                  <p className={`${ibm.className} text-[16px] text-[#161616] font-normal leading-[150%]`}>
                     {item?.answers}
                   </p>
                 </div>

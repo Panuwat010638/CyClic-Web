@@ -2,7 +2,7 @@
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
 
-const IBM =  IBM_Plex_Sans_Thai(
+const ibm =  IBM_Plex_Sans_Thai(
   { 
     weight: ['100','200','300','400','500','600', '700'],
     style: ['normal'],
@@ -44,7 +44,7 @@ export default function WorkSlugPageSec04({data}) {
                         {item?.title}
                       </h3>
                       {/* Body */}
-                      <p className={`text-[18px] text-[#161616] font-normal leading-[150%] ${IBM.className}`}>
+                      <p className={`text-[18px] text-[#161616] font-normal leading-[150%] ${ibm.className}`}>
                         {item?.detail}
                       </p>
                     </div>
