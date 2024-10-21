@@ -174,7 +174,7 @@ const ListSection = ({ items, className }) => (
                   variants={containerVariants}
                 >
                   <motion.div className='w-full h-full' animate="float" variants={floatVariants}>
-                    <Spline scene="https://draft.spline.design/lpE7fO0UWGIzMw50/scene.splinecode" autoHideCursor={false}/>
+                    <Spline scene="https://draft.spline.design/lpE7fO0UWGIzMw50/scene.splinecode" />
                   </motion.div>
                 </motion.div>
               </div>
