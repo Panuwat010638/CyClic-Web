@@ -1,5 +1,5 @@
 'use client'
-import { Image} from "@nextui-org/react"
+import { Image,Breadcrumbs, BreadcrumbItem} from "@nextui-org/react"
 import Link from "next/link";
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 import client from "../../../../client";
@@ -22,11 +22,19 @@ export default function WorkSlugPageSec02({data}) {
   return (
     <section className='bg-[#fcfcfc]'>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[40px] lg:pb-[56px]'>
-        <div className='flex justify-center w-full h-full'>
-            {/* Content */}
-            <div className='flex flex-col lg:flex-row w-full items-center gap-[24px] h-full relative'>
+        <div className='flex flex-col justify-center w-full h-full gap-y-[64px]'>
+          {/* Bread Cumb */}
+          <div className="flex w-full">
+            <Breadcrumbs separator="/" size="md" classNames={{separator:"text-primary-dark-blue"}} className="flex items-center w-full">
+                <BreadcrumbItem href={`/works/category/${data?.category}`} classNames={{separator:"text-[#161616]",item:"text-[18px] text-[#161616] font-[400] leading-[150%]"}} className="text-[18px] text-[#161616] font-[400] leading-[150%]">{data?.category}</BreadcrumbItem>
+                <BreadcrumbItem classNames={{separator:"text-[#FB602F]",item:"text-[18px] text-[#FB602F] font-[400] leading-[150%] text-balance"}} className="text-[18px] text-[#FB602F] font-[400] leading-[150%]">{data?.header?.header}</BreadcrumbItem>
+            </Breadcrumbs>
+          </div>
+          {/* Content */}
+          <div className='flex flex-col lg:flex-row w-full items-center gap-[24px] h-full relative'>
               {/* Image */}
-              <div className="flex justify-center items-center w-full sm:w-[592px] lg:w-[calc(100%-544px)] h-[300px] sm:h-[320px] lg:h-[375px] rounded-[16px]">
+              {data?.images.headerImage?.image ? (
+                <div className="flex justify-center items-center w-full sm:w-[592px] lg:w-[calc(100%-544px)] h-[300px] sm:h-[320px] lg:h-[375px] rounded-[16px]">
                   <Image quality={100} className="object-contain object-center w-full h-full rounded-[16px]" 
                   classNames={{wrapper:"object-contain w-full h-full rounded-[16px]"}}
                   radius="none"
@@ -34,7 +42,9 @@ export default function WorkSlugPageSec02({data}) {
                   placeholder="blur"
                   alt={data?.images.headerImage?.alt}
                   width="100%" height="100%" />
-              </div>
+                </div>
+              ):null}
+
               {/* Text */}
               <div className='flex flex-col w-full sm:w-[592px] lg:w-[520px] lg:h-full gap-y-[24px]'>
                 <h1 className="text-[36px] lg:text-[48px] text-[#FB602F] font-extrabold leading-[100%] uppercase">
@@ -59,7 +69,7 @@ export default function WorkSlugPageSec02({data}) {
                   Visit
               </a>
               </div>
-            </div>
+          </div>
 
         </div>
       </div>

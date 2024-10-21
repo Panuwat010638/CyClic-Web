@@ -2,30 +2,30 @@
 import Link from "next/link";
 import { useState,useEffect } from "react"
 import {Card, CardBody, CardFooter,Pagination,Skeleton } from '@nextui-org/react'
-import CardWork from "../Cards/CardWork";
 import { Select, SelectItem } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
-export default function WorkPageSec02({category,work,params}) {
+import CardWork from "@/components/Cards/CardWork";
+export default function WorkCatPageSec02({category,work,params}) {
   const route = useRouter();
-  const [cat,setCat]=useState('All');
+  const [cat,setCat]=useState(params?.category != undefined ? params?.category:'All');
   const itemsPerPage = 12;
   const [currentPage, setCurrentPage] = useState(1);
   const [startIndex,setStartIndex]=useState(0)
   const [endIndex,setEndIndex]=useState(0)
   const [workfilter,setFilterwork]=useState(work||[])
   const [isLoading, setIsLoading] = useState(true)
-
+  const paramsCat = decodeURIComponent(params?.category)
 
 
 useEffect(() => {
   if(params?.number == undefined){
     setCurrentPage(1);
   }else if(params?.number == 1){
-    route.push('/works')
+    route.push(`/works/category/${paramsCat}`)
   }else {
     setCurrentPage(Number(params.number))
   }// Simulating a 1.5 second load time
-}, [params]);
+}, [params?.number]);
 
   //Pagination
   useEffect(() => {
@@ -33,9 +33,9 @@ useEffect(() => {
       const startIndex = cur * itemsPerPage;
       const endIndex = startIndex + itemsPerPage;
       if(currentPage!=1){
-        route?.push(`/works/page/${currentPage}`)
+        route?.push(`/works/category/${paramsCat}/page/${currentPage}`)
       }else{
-        route?.push(`/works`)
+        route?.push(`/works/category/${paramsCat}`)
       }
 
       setStartIndex(startIndex)
@@ -46,7 +46,6 @@ useEffect(() => {
           setIsLoading(false)
       }, 1000) // Simulating a 1.5 second load time
   }, [currentPage]);
-
   const lengthData = workfilter?.length
   const result = parseInt(lengthData / itemsPerPage);
   const result2 = parseInt(lengthData % itemsPerPage);
@@ -79,13 +78,13 @@ useEffect(() => {
           ))}
         </div> */}
         <div className="hidden lg:flex justify-between items-center w-full gap-x-[16px]">
-          <Link href={`/works`} key="All" className={`flex justify-center ${cat=="All" ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
+          <Link href={`/works`} key="All" className={`flex justify-center ${cat==paramsCat ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
             items-center lg:w-[137px] transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px]
             lg:text-[18px] text-[#000000] font-normal leading-[125%] uppercase`}>
               All
           </Link>
           {category?.map((item,index)=>(
-            <Link href={`/works/category/${item?.title}`} key={item?.title+` index: ${index}`} className={`flex justify-center ${item?.title == cat ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
+            <Link href={`/works/category/${item?.title}`} key={item?.title+` index: ${index}`} className={`flex justify-center ${item?.title == paramsCat ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
             items-center lg:w-auto lg:px-6 transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px] 
             lg:text-[18px] text-[#000000] font-normal leading-[125%] uppercase`}>
               {item?.title}
@@ -96,11 +95,11 @@ useEffect(() => {
           <Select 
             variant={"bordered"}
             className="max-w-full h-[48px]"
-            defaultSelectedKeys={["All"]}
+            defaultSelectedKeys={[paramsCat]}
             classNames={{base:'h-[48px]',mainWrapper:'h-[48px]',trigger:'h-[48px] border-[#161616]',value:'text-[#161616] text-[18px] font-normal uppercase',popoverContent:"text-[#161616] text-[16px] font-normal uppercase"}}
             radius="full"
             value={cat}
-            onChange={(e) => route.push(`/works/category/${e.target.value}`)}
+            onChange={(e) => route.push(e?.target?.value == 'All' ? '/works':`/works/category/${e.target.value}`)}
           >
             {options.map((option) => (
               <SelectItem key={option.key} value={option.key}>
