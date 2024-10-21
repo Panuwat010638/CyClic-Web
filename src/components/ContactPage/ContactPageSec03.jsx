@@ -10,7 +10,7 @@ const ibm =  IBM_Plex_Sans_Thai(
 
 export default function ContactPageSec03({data}) {
   return (
-    <section className={`bg-[#fcfcfc] ${IBM .className}`}>
+    <section className={`bg-[#fcfcfc] ${ibm .className}`}>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[56px] lg:pb-[80px]'>
         <div className='flex justify-center items-center w-full h-full'>
             {/* Contact */}
