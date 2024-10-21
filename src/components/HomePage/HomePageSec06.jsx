@@ -166,7 +166,7 @@ const ListSection = ({ items, className }) => (
               className='hidden lg:flex flex-col w-full lg:w-[calc(50%-274px)] gap-y-[32px] lg:gap-y-[44px] xl:gap-y-[56px]'
             />
               {/* 3D */}
-              <div ref={ref} className="flex items-center justify-center w-[300px] lg:w-[500px] z-0 relative right-6 h-[600px]">
+              <div ref={ref} className="flex cursur-img items-center justify-center w-[300px] lg:w-[500px] z-0 relative right-6 h-[600px]">
                 <motion.div
                   initial="hidden"
                   animate={controls}

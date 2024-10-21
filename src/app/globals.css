@@ -48,7 +48,9 @@ p {
   background: url("./hero.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
-
+.cursur-img {
+  cursor: url('../../public/Logo.png'), auto;
+}
 /* h1 {
   position: absolute;
   top: 50%;
