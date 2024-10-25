@@ -44,7 +44,7 @@ export default function WorkSlugPageSec04({data}) {
                         {item?.title}
                       </h3>
                       {/* Body */}
-                      <p className={`text-[18px] text-[#161616] font-normal leading-[150%] ${ibm.className}`}>
+                      <p className={`text-[18px] text-[#161616] font-normal leading-[150%] whitespace-pre-line ${ibm.className}`}>
                         {item?.detail}
                       </p>
                     </div>
