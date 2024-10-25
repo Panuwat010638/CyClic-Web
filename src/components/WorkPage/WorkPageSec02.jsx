@@ -57,6 +57,10 @@ useEffect(() => {
     { key: 'All', label: 'All' },
     ...category.map(item => ({ key: item.title, label: item.title }))
   ];
+  const handlePageChange = (page) => {
+        
+    route.push(`/works/page/${page}`);
+  };
   return (
     <section className='bg-[#fcfcfc]'>
     <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[36px] sm:pb-[48px] lg:pb-[54px]'>
@@ -152,7 +156,7 @@ useEffect(() => {
                       prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] data-[disabled=true]:border-default-300 data-[disabled=true]:text-default-300  bg-transparent  transition-all duration-300",
                       }}
                     page={currentPage}
-                    onChange={setCurrentPage}
+                    onChange={handlePageChange}
                    
                      />
                 </div> 
@@ -169,7 +173,7 @@ useEffect(() => {
                     prev:"text-[#FF5941] rounded-full w-[48px] h-[48px] border-[1px] border-[#FF5941] data-[disabled=true]:border-default-300 data-[disabled=true]:text-default-300 bg-transparent  transition-all duration-300",
                     }}
                   page={currentPage}
-                  onChange={setCurrentPage}
+                  onChange={handlePageChange}
                  
                    />
               </div> 
