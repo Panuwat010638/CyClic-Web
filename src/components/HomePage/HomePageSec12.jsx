@@ -67,7 +67,7 @@ export default function HomePageSec12() {
       }
     };
   return (
-    <section className='bg-[#fcfcfc] scroll-mt-[100px]'>
+    <section className='bg-[#fcfcfc] scroll-mt-[100px]' id='proposal'>
         <div className="max-w-full mx-auto">
             <div className="flex flex-col justify-center items-center w-full h-full">
 
