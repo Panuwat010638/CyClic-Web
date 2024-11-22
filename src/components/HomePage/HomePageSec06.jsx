@@ -166,7 +166,7 @@ const ListSection = ({ items, className }) => (
               className='hidden lg:flex flex-col w-full lg:w-[calc(50%-274px)] gap-y-[32px] lg:gap-y-[44px] xl:gap-y-[56px]'
             />
               {/* 3D */}
-              <div ref={ref} className="flex cursur-img items-center justify-center w-[300px] lg:w-[500px] z-0 relative right-6 h-[600px]">
+              <div ref={ref} className="flex cursur-img items-center justify-center w-[300px] lg:w-[500px] z-0 relative h-[500px]">
                 <motion.div
                   initial="hidden"
                   animate={controls}
@@ -174,7 +174,7 @@ const ListSection = ({ items, className }) => (
                   variants={containerVariants}
                 >
                   <motion.div className='w-full h-full' animate="float" variants={floatVariants}>
-                    <Spline scene="https://draft.spline.design/lpE7fO0UWGIzMw50/scene.splinecode" />
+                    <Spline scene="https://prod.spline.design/15aI9d85Nq3JB7lZ/scene.splinecode" />
                   </motion.div>
                 </motion.div>
               </div>
