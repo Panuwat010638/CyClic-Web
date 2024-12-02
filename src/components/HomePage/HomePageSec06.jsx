@@ -110,9 +110,9 @@ const ListSection = ({ items, className }) => (
           <rect width="23" height="23" rx="11.5" fill="#FB602F"/>
         </svg>
         <div className='flex flex-col w-[calc(100%-39px)] gap-y-[8px]'>
-          <h4 className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-light italic leading-[130%] lg:whitespace-pre-line'>
+          <b className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-light italic leading-[130%] lg:whitespace-pre-line'>
             {item?.title}
-          </h4>
+          </b>
           <p className={`${ibm.className} text-[16px] lg:text-[18px] text-[#BEBEBE] font-light leading-[130%] italic`}>
             {item?.detail}
           </p>

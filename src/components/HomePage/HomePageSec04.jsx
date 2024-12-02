@@ -145,9 +145,9 @@ export default function HomePageSec04({data}) {
                       width="100%" height="100%" />
                   </div>
                   <div className='flex justify-center items-end w-full h-full absolute top-0 z-[10] rounded-[16px] lg:p-[32px]'>
-                    <h3 className="text-[20px] font-semibold text-[#fcfcfc] leading-[125%] whitespace-pre-line text-center uppercase">
+                    <label className="text-[20px] font-semibold text-[#fcfcfc] leading-[125%] whitespace-pre-line text-center uppercase">
                       {item.title}
-                    </h3>
+                    </label>
                   </div>
                 </div>
               ))}

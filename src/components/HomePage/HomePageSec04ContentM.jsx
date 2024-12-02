@@ -88,20 +88,20 @@ function ServiceItem({ item,index,on }) {
                   width="100%" height="100%" />
               </div>
               <div className='flex justify-center items-end w-full h-full absolute top-0 z-[10] rounded-[16px] p-[16px] lg:p-[32px]'>
-                <h3 className="text-[20px] font-semibold text-[#fcfcfc] leading-[125%] whitespace-pre-line text-center uppercase">
+                <b className="text-[20px] font-semibold text-[#fcfcfc] leading-[125%] whitespace-pre-line text-center uppercase">
                   {item.title}
-                </h3>
+                </b>
               </div>
             </div>
             <div 
                   className="flex flex-col items-center flex-shrink-0 w-full gap-y-[12px]"
                 >
-                  <h3 className="text-[18px] lg:text-[20px] font-semibold text-[#161616] leading-[125%] uppercase">
+                  <b className="text-[18px] lg:text-[20px] font-semibold text-[#161616] leading-[125%] uppercase">
                     {item.title}
-                  </h3>
-                  <p className={`${ibm.className} text-[16px] lg:text-[18px] text-[#161616] leading-[150%] font-normal text-center`}>
+                  </b>
+                  <span className={`${ibm.className} text-[16px] lg:text-[18px] text-[#161616] leading-[150%] font-normal text-center`}>
                     {item.detail}
-                  </p>
+                  </span>
                 </div>
         </motion.div>
         

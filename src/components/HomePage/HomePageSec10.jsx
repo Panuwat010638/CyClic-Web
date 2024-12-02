@@ -73,9 +73,7 @@ export default function HomePageSec10({data}) {
                               <h2 className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
                                 {data?.content?.header}
                               </h2>
-                              <h2 className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-medium leading-[125%] italic text-center lg:text-start uppercase whitespace-pre-line">
-                                {data?.content?.header2}
-                              </h2>
+                             
                             </div>
                             {/* Right */}
                             <div className="hidden lg:flex justify-center lg:justify-start items-center gap-x-[24px]">
