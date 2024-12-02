@@ -64,6 +64,8 @@ export default async function Workspage() {
     const work = posts.props.work;
   return (
     <main>
+        <h1 className='sr-only'>Cyclic บริการออกแบบทำเว็บไซต์</h1>
+        <h2 className='sr-only'>Cyclic รับทำเว็บไซต์ เน้นดีไซน์สวยและการใช้งานง่าย ออกแบบตามโจทย์ธุรกิจ บริการ web design และ user interface design ช่วยดึงดูดความสนใจจากกลุ่มเป้าหมาย</h2>
         <WorkPageSec01 data={data[0]}/>
         <WorkPageSec02 category={category} work={work}/>
     </main>

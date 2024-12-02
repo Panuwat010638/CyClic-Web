@@ -146,9 +146,9 @@ function ServiceItem({ item,index }) {
             <b className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#FB602F] font-medium leading-[125%] uppercase whitespace-pre-line">
                 {`${item?.count}+`}
             </b>
-            <b className="text-[20px] sm:text-[36px] lg:text-[48px] text-[#161616] font-normal leading-[125%] italic uppercase whitespace-pre-line">
+            <h3 className="text-[20px] sm:text-[36px] lg:text-[48px] text-[#161616] font-normal leading-[125%] italic uppercase whitespace-pre-line">
                 {item?.title}
-            </b>
+            </h3>
           
          
         </motion.div>

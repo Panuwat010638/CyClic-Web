@@ -23,9 +23,9 @@ export default function HomePageSec03({data}) {
                         {/* Header */}
                         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start w-full">
                           <div className='flex items-center gap-x-[16px] sm:gap-x-[24px] pb-[16px] lg:pb-0'>
-                            <p className="text-[20px] lg:text-[32px] text-[#FB602F] font-semibold leading-[130%] uppercase">
+                            <h3 className="text-[20px] lg:text-[32px] text-[#FB602F] font-semibold leading-[130%] uppercase">
                               {data?.content?.subheader}
-                            </p>
+                            </h3>
                             <svg className='min-w-[23px] min-h-[24px]' width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <rect y="0.5" width="23" height="23" rx="11.5" fill="#FB602F"/>
                             </svg>
@@ -33,12 +33,12 @@ export default function HomePageSec03({data}) {
                           <div className='flex gap-x-[16px]'>
                             {/* Left */}
                             <div className='flex flex-col'>
-                              <b className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
+                              <h2 className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
                                 {data?.content?.header}
-                              </b>
-                              <b className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-medium leading-[125%] italic text-center lg:text-start uppercase whitespace-pre-line">
+                              </h2>
+                              <h2 className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-medium leading-[125%] italic text-center lg:text-start uppercase whitespace-pre-line">
                                 {data?.content?.header2}
-                              </b>
+                              </h2>
                             </div>
                             {/* Right */}
                             <svg className='hidden lg:flex min-w-[109px] min-h-[109px] animate-spin-slow' width="109" height="109" viewBox="0 0 109 109" fill="none" xmlns="http://www.w3.org/2000/svg">

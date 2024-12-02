@@ -17,9 +17,9 @@ export default function ServicePageSec01({data}) {
         <div className='flex justify-between items-center w-full h-full lg:gap-x-6'>
           {/* Text */}
           <div className="flex w-full lg:w-auto justify-center lg:justify-start">
-              <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
+              <h2 className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
                   {data?.header?.header}
-              </b>
+              </h2>
           </div>
           {/* Button */}
           <div className="group hidden lg:flex items-center gap-x-[14px] pb-[20px] border-b-[1px] border-[#939393]">

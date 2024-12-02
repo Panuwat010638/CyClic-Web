@@ -61,21 +61,21 @@ export default function HomePageSec10({data}) {
                         <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start w-full">
                           <div className='flex items-center gap-x-[16px] sm:gap-x-[24px] pb-[16px] lg:pb-0'>
                             <div className="flex justify-center items-center rounded-[4px] bg-[#FB602F] py-[4px] w-[300px]">
-                              <b className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
+                              <h3 className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
                                 {data?.content?.subheader}
-                              </b>
+                              </h3>
                             </div>
 
                           </div>
                           <div className='flex w-full justify-center lg:justify-between gap-x-[16px]'>
                             {/* Left */}
                             <div className='flex flex-col'>
-                              <b className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
+                              <h2 className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line">
                                 {data?.content?.header}
-                              </b>
-                              <b className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-medium leading-[125%] italic text-center lg:text-start uppercase whitespace-pre-line">
+                              </h2>
+                              <h2 className="text-[36px] sm:text-[40px] lg:text-[60px] text-[#161616] font-medium leading-[125%] italic text-center lg:text-start uppercase whitespace-pre-line">
                                 {data?.content?.header2}
-                              </b>
+                              </h2>
                             </div>
                             {/* Right */}
                             <div className="hidden lg:flex justify-center lg:justify-start items-center gap-x-[24px]">

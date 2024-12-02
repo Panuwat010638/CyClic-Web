@@ -9,9 +9,9 @@ export default function BlogPageSec01({data}) {
           <div className='flex justify-center lg:justify-between items-end w-full h-full lg:gap-x-6'>
             {/* Text */}
             <div className="flex">
-                <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line lg:whitespace-normal">
+                <h2 className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] text-center lg:text-start uppercase whitespace-pre-line lg:whitespace-normal">
                     {data?.header?.header}
-                </b>
+                </h2>
             </div>
             {/* Sub */}
             <p className='hidden lg:flex text-[16px] font-normal text-[#161616] uppercase leading-[125%]'>

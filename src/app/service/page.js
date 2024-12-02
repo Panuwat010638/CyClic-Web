@@ -68,6 +68,7 @@ export default async function Servicepage() {
     const work = posts.props.work;
   return (
     <main>
+        <h1 className='sr-only'>Cyclic บริการวิเคราะห์ข้อมูลธุรกิจ</h1>
         <ServicePageSec01 data={data[0]}/>
         <SlideTextTop data={data[0]}/>
         <ServicePageSec02 data={data[0]?.service} data2={data[0]}/>

@@ -97,12 +97,12 @@ export default function HomePageSec12() {
                             gap-y-[32px] ">
                             {/* Header */}
                             <div className='flex flex-col items-center w-full gap-y-[16px]'>
-                                <b className='text-[24px] lg:text-[36px] font-bold text-[#161616] leading-[130%] uppercase text-center'>
+                                <h2 className='text-[24px] lg:text-[36px] font-bold text-[#161616] leading-[130%] uppercase text-center'>
                                     start what you have <br/>
                                     <span className='text-[24px] lg:text-[36px] italic text-[#161616] leading-[130%] font-medium uppercase'>
                                         in mind
                                     </span>
-                                </b>
+                                </h2>
                                 <p className='text-[16px] lg:text-[20px] font-medium text-[#FB602F] uppercase'>
                                     Consult with Cy-click
                                 </p>

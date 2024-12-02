@@ -57,9 +57,9 @@ export default function HomePageSec13({data}) {
           {/* Header */}
           <div className='flex justify-center lg:justify-between items-end w-full lg:gap-x-6'>
             <div className="flex justify-center lg:justify-start">
-              <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[110%] sm:leading-[100%] text-center lg:text-start uppercase whitespace-pre-line lg:whitespace-normal">
+              <h2 className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[110%] sm:leading-[100%] text-center lg:text-start uppercase whitespace-pre-line lg:whitespace-normal">
                 {data?.header}
-              </b>
+              </h2>
             </div>
   
           </div>

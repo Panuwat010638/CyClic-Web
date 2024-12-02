@@ -27,9 +27,9 @@ export default function HomePageSec07() {
                     {/* Text */}
                     <div className="flex flex-col items-center  justify-center">
 
-                      <b className="text-[32px] lg:text-[48px] text-[#fcfcfc] font-light italic leading-[125%] uppercase text-center  whitespace-pre-line">
+                      <h2 className="text-[32px] lg:text-[48px] text-[#fcfcfc] font-light italic leading-[125%] uppercase text-center  whitespace-pre-line">
                         {data?.content?.header}
-                      </b>
+                      </h2>
                     </div>
                     <svg className='min-w-[26px] min-h-[26px]' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.9259 12.8633H1" stroke="#FB602F" stroke-width="2" stroke-linecap="round"/>

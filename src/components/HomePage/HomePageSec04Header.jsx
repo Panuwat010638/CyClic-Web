@@ -10,13 +10,13 @@ export default function HomePageSec04Header({data}) {
             {/* Text */}
             <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-y-[16px]">
               <div className="flex justify-center items-center rounded-[4px] bg-[#FB602F] py-[4px] w-[200px]">
-                <b className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
+                <h3 className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
                   {data?.content?.subheader}
-                </b>
+                </h3>
               </div>
-              <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
+              <h2 className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
                 {data?.content?.header}
-              </b>
+              </h2>
             </div>
             {/* Button */}
             <div className="group hidden lg:flex items-center gap-x-[14px] pb-[20px] border-b-[1px] border-[#939393]">

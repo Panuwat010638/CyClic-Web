@@ -78,6 +78,8 @@ export default async function page() {
     const highlight = posts.props.highlight;
   return (
     <main>
+      <h1 className='sr-only'>Cyclic บริการสร้างแผนงานธุรกิจ</h1>
+      <h2 className='sr-only'> เราบริการครอบคลุมตั้งแต่เริ่มวางแผนธุรกิจ พัฒนาแผนงานธุรกิจ จนถึงการสร้าง กลยุทธ์ทางการตลาดดิจิทัลที่เหมาะสมกับธุรกิจของคุณ เราเน้นวางแผนการตลาดที่มีความยืดหยุ่นสูง เพื่อให้สอดคล้องกับสภาพแวดล้อมทางธุรกิจที่เปลี่ยนแปลงอยู่เสมอ</h2>
         <BlogPageSec01 data={data[0]}/>
         <SlideTextTop data={data[0]}/>
         <BlogPageSec03 highlight={highlight}/>

@@ -110,9 +110,9 @@ const ListSection = ({ items, className }) => (
           <rect width="23" height="23" rx="11.5" fill="#FB602F"/>
         </svg>
         <div className='flex flex-col w-[calc(100%-39px)] gap-y-[8px]'>
-          <b className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-light italic leading-[130%] lg:whitespace-pre-line'>
+          <h4 className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-light italic leading-[130%] lg:whitespace-pre-line'>
             {item?.title}
-          </b>
+          </h4>
           <p className={`${ibm.className} text-[16px] lg:text-[18px] text-[#BEBEBE] font-light leading-[130%] italic`}>
             {item?.detail}
           </p>
@@ -133,18 +133,18 @@ const ListSection = ({ items, className }) => (
               <div className="flex flex-col items-center lg:items-start justify-center lg:justify-start gap-y-[16px]">
                 <div className='flex flex-col lg:flex-row items-center gap-[16px]'>
                   <div className="flex justify-center items-center rounded-[4px] bg-[#FB602F] py-[4px] w-[200px]">
-                    <b className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
+                    <h3 className="text-[20px] lg:text-[24px] text-[#fcfcfc] font-medium leading-[125%] uppercase text-center">
                       {data?.content?.subheader}
-                    </b>
+                    </h3>
                   </div>
-                  <b className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-semibold leading-[130%] uppercase '>
+                  <h3 className='text-[20px] lg:text-[24px] text-[#fcfcfc] font-semibold leading-[130%] uppercase '>
                     {data?.content?.title}
-                  </b>
+                  </h3>
                 </div>
 
-                <b className="text-[40px] lg:text-[60px] text-[#fcfcfc] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
+                <h2 className="text-[40px] lg:text-[60px] text-[#fcfcfc] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
                   {data?.content?.header}
-                </b>
+                </h2>
               </div>
               {/* Button */}
               <div className="group hidden lg:flex items-center gap-x-[14px] pb-[20px] border-b-[1px] border-[#939393]">
