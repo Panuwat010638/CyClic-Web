@@ -57,9 +57,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: post.seo?.keywords,
     alternates: {
       canonical: `/blog`,
-      languages: {
-        'th': '/th',
-      },},
+    },
       openGraph: {
         title: post.seo?.titletag,
         description: post.seo?.description,

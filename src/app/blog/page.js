@@ -57,9 +57,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     keywords: post.seo?.keywords,
     alternates: {
       canonical: `/blog`,
-      languages: {
-        'th': '/th',
-      },},
+    },
       openGraph: {
         title: post.seo?.titletag,
         description: post.seo?.description,
@@ -76,13 +74,14 @@ export default async function page() {
     const category = posts.props.category;
     const blog = posts.props.blog;
     const highlight = posts.props.highlight;
+
   return (
     <main>
       <h1 className='sr-only'>Cyclic บริการสร้างแผนงานธุรกิจ</h1>
       <h2 className='sr-only'> เราบริการครอบคลุมตั้งแต่เริ่มวางแผนธุรกิจ พัฒนาแผนงานธุรกิจ จนถึงการสร้าง กลยุทธ์ทางการตลาดดิจิทัลที่เหมาะสมกับธุรกิจของคุณ เราเน้นวางแผนการตลาดที่มีความยืดหยุ่นสูง เพื่อให้สอดคล้องกับสภาพแวดล้อมทางธุรกิจที่เปลี่ยนแปลงอยู่เสมอ</h2>
         <BlogPageSec01 data={data[0]}/>
         <SlideTextTop data={data[0]}/>
-        <BlogPageSec03 highlight={highlight}/>
+        {highlight[0] ? (<BlogPageSec03 highlight={highlight}/>):null}
         <BlogPageSec04 data={data[0]} blog={blog} category={category}/>
     </main>
   )

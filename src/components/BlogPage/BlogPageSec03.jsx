@@ -48,8 +48,9 @@ export default function BlogPageSec03({highlight}) {
     const year = date.getFullYear();
     return `${day}.${month}.${year}`;
   };
+ 
   return (
-    <section className='bg-[#fcfcfc]'>
+    <section className={`bg-[#fcfcfc] ${highlight?.length == 0 ? "hidden":""}`}>
       <div className='max-w-7xl mx-auto px-6 xl:px-0 pb-[36px] sm:pb-[48px] lg:pb-[54px]'>
         <div className='flex flex-col justify-center items-center w-full h-full gap-y-[16px] lg:gap-y-[48px]'>
           {/* Highlight */}
@@ -153,11 +154,16 @@ export default function BlogPageSec03({highlight}) {
                       <circle cx="24" cy="24" r="23.5" stroke="#FF5941"/>
                     </svg>
                   )}
-     
-                    <svg className="min-w-[48px] min-h-[48px] cursor-pointer" onClick={()=>updateActiveIndex(activeIndex+1)} width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {activeIndex!=0 && highlight?.length != 0 ? (<svg className="min-w-[48px] min-h-[48px] cursor-pointer" onClick={()=>updateActiveIndex(activeIndex+1)} width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 13L30 23L20 33" stroke="#FF5941" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <circle cx="24" cy="24" r="23.5" stroke="#FF5941"/>
+                    </svg>):(
+                      <svg className="min-w-[48px] min-h-[48px]" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 13L30 23L20 33" stroke="#BEBEBE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="24" cy="24" r="23.5" stroke="#BEBEBE"/>
                     </svg>
+                    )}
+                    
 
 
                   </div>
