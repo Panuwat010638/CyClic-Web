@@ -36,15 +36,15 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const post = await client.fetch(query)
   const ogImageUrl = post?.seo?.openGraphImage != undefined ? urlFor(post?.seo?.openGraphImage).width(1200).height(630).fit('scale').auto('format').format('webp').url():null;
   return {
-    title: post.seo?.titletag ,
-    description: post.seo?.description,
-    keywords: post.seo?.keywords,
+    title: post?.seo?.titletag ,
+    description: post?.seo?.description,
+    keywords: post?.seo?.keywords,
     alternates: {
       canonical: `/career`,
       },
       openGraph: {
-        title: post.seo?.titletag,
-        description: post.seo?.description,
+        title: post?.seo?.titletag,
+        description: post?.seo?.description,
         images: ogImageUrl ? [ ogImageUrl ] : ['/og.png' ],
         type: 'website',
         authors: ['Cy-Click Business Solution']

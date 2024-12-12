@@ -26,13 +26,13 @@ export default function BlogSlugSec01({data}) {
           <div className='flex justify-between items-end w-full h-full lg:gap-x-6'>
             {/* Text */}
             <div className="flex">
-                <b className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#161616] font-extrabold leading-[125%] uppercase">
+                <h1 className="text-[20px] sm:text-[32px] lg:text-[48px] text-[#161616] font-extrabold leading-[125%] uppercase">
                     {data?.title}
-                </b>
+                </h1>
             </div>
           </div>
-
-          <div 
+          {data?.mainImage?.image ? (
+            <div 
             className="flex relative justify-center items-center w-full min-w-full h-[240px] lg:h-[456px] rounded-[16px]">
               <Image quality={100} loading="lazy"
               className=" object-cover object-center w-full h-full rounded-[16px]" 
@@ -43,6 +43,8 @@ export default function BlogSlugSec01({data}) {
               alt={data?.mainImage?.alt}
               width="100%" height="100%" />
             </div>
+          ):null}
+          
 
         </div>
       </div>
