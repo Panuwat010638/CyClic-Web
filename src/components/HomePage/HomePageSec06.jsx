@@ -173,7 +173,7 @@ const ListSection = ({ items, className }) => (
                   className='flex justify-center items-center w-full h-full'
                   variants={containerVariants}
                 >
-                  <motion.div className='w-full h-full' animate="float" variants={floatVariants}>
+                  <motion.div className='lg:w-full h-full' animate="float" variants={floatVariants}>
                     <Spline scene="https://prod.spline.design/15aI9d85Nq3JB7lZ/scene.splinecode" />
                   </motion.div>
                 </motion.div>
