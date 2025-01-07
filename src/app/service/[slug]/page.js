@@ -4,6 +4,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import ServiceSlugPageSec01 from "@/components/ServicePage/Slug/ServiceSlugPageSec01";
 import ServiceSlugPageSec02 from "@/components/ServicePage/Slug/ServiceSlugPageSec02";
 import ServiceSlugPageSec03 from "@/components/ServicePage/Slug/ServiceSlugPageSec03";
+import ServiceSlugPageSec04 from "@/components/ServicePage/Slug/ServiceSlugPageSec04";
 
 export const revalidate = 10;
 export const dynamicParams = true;
@@ -34,10 +35,10 @@ async function getPosts(params) {
             list,
             status,
             "category":category->title,
-            work{
+            
               "header":ourwork->header,
               "images":ourwork->images,
-            },
+            "workslug":ourwork->slug,
             mainImage,
             slug,
             date,
@@ -81,11 +82,13 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function serviceslugpage({params}) {
     const posts = await getPosts(params);
     const data = posts.props.posts;
+    console.log(data)
   return (
     <main>
         <ServiceSlugPageSec01 data={data}/>
         <ServiceSlugPageSec02 data={data}/>
         <ServiceSlugPageSec03 data={data}/>
+        <ServiceSlugPageSec04 data={data}/>
     </main>
   )
 }
