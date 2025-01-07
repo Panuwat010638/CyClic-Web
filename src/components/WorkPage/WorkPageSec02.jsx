@@ -82,7 +82,7 @@ useEffect(() => {
             </button>
           ))}
         </div> */}
-        <div className="hidden lg:flex justify-between items-center w-full gap-x-[16px]">
+        <div className="hidden xl:flex justify-between items-center w-full gap-x-[16px]">
           <Link href={`/works`} key="All" className={`flex justify-center ${cat=="All" ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
             items-center lg:w-[137px] transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px]
             lg:text-[18px] text-[#000000] font-normal leading-[125%] uppercase`}>
@@ -96,7 +96,7 @@ useEffect(() => {
             </Link>
           ))}
         </div>
-        <div className="flex lg:hidden justify-center items-center w-full sm:w-[592px]">
+        <div className="flex xl:hidden justify-center items-center w-full sm:w-[592px]">
           <Select 
             variant={"bordered"}
             className="max-w-full h-[48px]"
