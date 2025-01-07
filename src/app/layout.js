@@ -98,8 +98,8 @@ export default async function RootLayout({ children }) {
   const navbar = posts.props.navbar;
   const gtag = posts.props.gtag;
   return (
-    <html lang="th">
-      <body className={inter.className}>
+    <html className={inter.className} lang="th">
+      <body>
       <GA data={gtag?.title}/>
         <BGnavbar/>
         <Menu data={navbar[0]}/>
