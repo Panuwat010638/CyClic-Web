@@ -77,16 +77,16 @@ useEffect(() => {
             </button>
           ))}
         </div> */}
-        <div className="hidden lg:flex justify-between items-center w-full gap-x-[16px]">
-          <Link href={`/works`} key="All" className={`flex justify-center ${cat==paramsCat ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
+        <div className="hidden lg:flex justify-between items-center w-full gap-x-[14px]">
+          <Link href={`/works`} key="All" className={`flex justify-center ${cat=='All' ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
             items-center lg:w-[137px] transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px]
-            lg:text-[18px] text-[#000000] font-normal leading-[125%] uppercase`}>
+            lg:text-[16px] text-[#000000] font-normal leading-[125%] uppercase`}>
               All
           </Link>
           {category?.map((item,index)=>(
             <Link href={`/works/category/${item?.title}`} key={item?.title+` index: ${index}`} className={`flex justify-center ${item?.title == paramsCat ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
-            items-center lg:w-auto lg:px-6 transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px] 
-            lg:text-[18px] text-[#000000] font-normal leading-[125%] uppercase`}>
+            items-center px-5 transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px] 
+            lg:text-[16px] text-[#000000] font-normal leading-[125%] uppercase`}>
               {item?.title}
             </Link>
           ))}

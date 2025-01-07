@@ -82,7 +82,7 @@ useEffect(() => {
             </button>
           ))}
         </div> */}
-        <div className="hidden xl:flex justify-between items-center w-full gap-x-[12px]">
+        <div className="hidden xl:flex justify-between items-center w-full gap-x-[14px]">
           <Link href={`/works`} key="All" className={`flex justify-center ${cat=="All" ? "bg-[#FFB69E]":"bg-[#fcfcfc] hover:bg-[#FFB69E]"}
             items-center lg:w-[137px] transition-all duration-500 h-[48px] border-[#161616] border-[1px] rounded-[50px]
             lg:text-[16px] text-[#000000] font-normal leading-[125%] uppercase`}>
