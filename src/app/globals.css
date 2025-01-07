@@ -9,6 +9,37 @@
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
 
+.animated-path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: drawPath 3s ease forwards;
+}
+
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 2000;
+    fill: transparent;
+  }
+  80% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #FB602F;
+    stroke: none; /* เอา stroke ออกเมื่อ fill เสร็จ */
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.svg-group {
+  opacity: 1;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -2,10 +2,6 @@
 import Link from "next/link"
 import { motion, useInView } from 'framer-motion';
 import { useRef,useEffect,useState } from 'react';
-import { Image } from "@nextui-org/react";
-import imageUrlBuilder from '@sanity/image-url'
-import client from "../../../client";
-import { gsap } from 'gsap';
 import { IBM_Plex_Sans_Thai } from "next/font/google";
 
 const ibm =  IBM_Plex_Sans_Thai(

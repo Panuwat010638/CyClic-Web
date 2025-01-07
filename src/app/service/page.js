@@ -34,8 +34,10 @@ async function getPosts() {
         "category":category->title,
     }`
     const work = await client.fetch(queryHighlight )
+    const queryService = groq`*[_type == "service" ] | order(_createdAt asc)`
+    const service = await client.fetch(queryService )
       return {
-          props: { posts,category,work},revalidate: 60
+          props: { posts,category,work,service},revalidate: 60
        
       }
 }
@@ -66,12 +68,13 @@ export default async function Servicepage() {
     const data = posts.props.posts;
     const category = posts.props.category;
     const work = posts.props.work;
+    const service = posts.props.service;
   return (
     <main>
         <h1 className='sr-only'>Cyclic บริการวิเคราะห์ข้อมูลธุรกิจ</h1>
         <ServicePageSec01 data={data[0]}/>
         <SlideTextTop data={data[0]}/>
-        <ServicePageSec02 data={data[0]?.service} data2={data[0]}/>
+        <ServicePageSec02 data={data[0]?.service} data2={data[0]} service={service}/>
         <ServicePageSec03 data={data[0]} work={work} category={category}/>
         <ServicePageSec04 data={data[0]?.question}/>
     </main>
