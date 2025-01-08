@@ -21,7 +21,7 @@ async function getPosts() {
     const posts = await client.fetch(query)
     const queryCategory = groq`*[_type == "BlogCategory"  ] | order(_createdAt desc)`
     const category = await client.fetch(queryCategory )
-    const queryBlog = groq`*[_type == "blog" && highlight != true  ] | order(_createdAt asc){
+    const queryBlog = groq`*[_type == "blog" && highlight != true  ] | order(_createdAt desc){
         title,
         mainImage,
         slug,
