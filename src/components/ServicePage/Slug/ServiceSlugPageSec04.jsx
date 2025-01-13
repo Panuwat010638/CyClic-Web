@@ -30,9 +30,9 @@ export default function ServiceSlugPageSec04({data}) {
               <div className="flex flex-col xl:flex-row items-center xl:items-start w-full lg:gap-x-[70px] xl:gap-x-[150px] gap-y-[32px] pb-[0px] lg:pb-[80px]">
                     {/* Left */}
                     <div className="flex flex-col items-center xl:items-start w-full sm:w-[592px] lg:w-full xl:w-[400px] lg:gap-y-[72px]">
-                        <b className="text-[40px] lg:text-[60px] text-[#161616]  font-extrabold leading-[125%] whitespace-pre-line lg:whitespace-normal xl:whitespace-pre-line uppercase text-center lg:text-start">
+                        <h2 className="text-[40px] lg:text-[60px] text-[#161616]  font-extrabold leading-[125%] whitespace-pre-line lg:whitespace-normal xl:whitespace-pre-line uppercase text-center lg:text-start">
                           {'Discover \nour works'}
-                        </b>
+                        </h2>
                         {/* Button */}
                         <div className="group hidden xl:flex items-center gap-x-[14px] pb-[20px] border-b-[1px] border-[#939393]">
                             <Link className="text-[20px] lg:text-[24px] text-[#161616] font-semibold leading-[130%] uppercase "
@@ -61,7 +61,7 @@ export default function ServiceSlugPageSec04({data}) {
                                   placeholder="blur"
                                   alt={data?.images?.mainImage?.alt}
                                   width="100%" height="100%" />
-                                  <Link aria-label="Button for opening the next page in content"  href={`/works/${decodeURIComponent(data?.workslug.slug?.slug?.current)}`} className="flex justify-center items-center w-full h-full absolute top-0 z-[10] rounded-[16px]"></Link>
+                                  <Link aria-label="Button for opening the next page in content"  href={`/works/${decodeURIComponent(data?.workslug.slug?.current)}`} className="flex justify-center items-center w-full h-full absolute top-0 z-[10] rounded-[16px]"></Link>
                                 </div>
                            
                             </div>
@@ -72,7 +72,7 @@ export default function ServiceSlugPageSec04({data}) {
                                 <div className="flex flex-col w-full gap-y-[8px]">
                                   <div className="flex flex-col w-full gap-y-[4px]">
                                     <AnimatedText02
-                                      el="h3"
+                                      el="b"
                                       activeIndex={0}
                                       y={30}
                                       staggertime={0.5}

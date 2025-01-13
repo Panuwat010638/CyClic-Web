@@ -116,9 +116,9 @@ function ServiceItem({ item, index, on }) {
           />
         </div>
         <div className='flex flex-col items-start w-full gap-y-[12px]'>
-          <b className="text-[20px] sm:text-[24px] text-[#161616] font-bold leading-[125%] whitespace-pre-line">
+          <h2 className="text-[20px] sm:text-[24px] text-[#161616] font-bold leading-[125%] whitespace-pre-line">
             {item?.text}
-          </b>
+          </h2>
           <p className={`${ibm.className} text-[18px] text-[#161616] leading-[150%] font-normal text-start`}>
             {item?.detail}
           </p>

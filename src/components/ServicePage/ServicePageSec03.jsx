@@ -55,7 +55,7 @@ export default function ServicePageSec03({category,work,data}) {
                 </div>
 
                 {/* COntent */}
-                <div className="flex flex-col xl:flex-row items-center xl:items-start w-full lg:gap-x-[70px] xl:gap-x-[150px] gap-y-[32px] pb-[0px] lg:pb-[80px] border-b-[0px] lg:border-b-[1px] border-[#939393]">
+                <div className={`flex flex-col xl:flex-row items-center xl:items-start w-full lg:gap-x-[70px] xl:gap-x-[150px] gap-y-[32px]  ${data?.status == true ? "pb-[0px] lg:pb-[80px] border-b-[0px] lg:border-b-[1px] border-[#939393]":""}`}>
                     {/* Left */}
                     <div className="flex flex-col items-center xl:items-start w-full sm:w-[592px] lg:w-full xl:w-[400px] lg:gap-y-[72px]">
                         <b className="text-[40px] lg:text-[60px] text-[#161616]  font-extrabold leading-[125%] whitespace-pre-line lg:whitespace-normal xl:whitespace-pre-line uppercase text-center lg:text-start">
@@ -195,7 +195,7 @@ export default function ServicePageSec03({category,work,data}) {
                         </div>
                     </div>                    
                 </div>
-                <div className="group flex xl:hidden justify-between sm:justify-start items-center gap-x-[14px] w-full sm:w-auto pb-[20px] border-b-[1px] border-[#939393]">
+                <div className={`group flex xl:hidden justify-between sm:justify-start items-center gap-x-[14px] w-full sm:w-auto ${data?.status == true ? "pb-[20px] border-b-[0px] lg:border-b-[1px] border-[#939393]":""}`}>
                     <Link className="text-[20px] lg:text-[24px] text-[#161616] font-semibold leading-[130%] uppercase "
                     href={data?.project?.button?.link} 
                     >

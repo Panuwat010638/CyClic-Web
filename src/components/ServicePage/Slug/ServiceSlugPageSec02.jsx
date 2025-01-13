@@ -37,16 +37,16 @@ export default function ServiceSlugPageSec02({data}) {
         {/* Header */}
         <div className='flex flex-col justify-center items-center w-full h-full gap-6 lg:gap-[32px]'>
           {/* Text */}
-          <h2 className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
+          <b className="text-[40px] lg:text-[60px] text-[#161616] font-extrabold leading-[125%] uppercase text-center lg:text-start whitespace-pre-line">
             services & capabilities
-          </h2>
+          </b>
   
           <h1 className="text-[24px] lg:text-[36px] text-[#FB602F] font-bold italic leading-[150%] uppercase">
               {data?.title}
           </h1>
-          <p className={`${ibm.className} text-[18px] lg:text-[20px] text-[#161616] font-normal leading-[150%] whitespace-pre-line text-center`}>
+          <h4 className={`${ibm.className} text-[18px] lg:text-[20px] text-[#161616] font-normal leading-[150%] whitespace-pre-line text-center`}>
             {data?.detail}
-          </p>
+          </h4>
         </div>
         <svg width="301" height="2" viewBox="0 0 301 2" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.25 1H300.75" stroke="#939393"/>

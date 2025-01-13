@@ -82,13 +82,16 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function serviceslugpage({params}) {
     const posts = await getPosts(params);
     const data = posts.props.posts;
-    console.log(data)
+ 
   return (
     <main>
         <ServiceSlugPageSec01 data={data}/>
         <ServiceSlugPageSec02 data={data}/>
         <ServiceSlugPageSec03 data={data}/>
-        <ServiceSlugPageSec04 data={data}/>
+        {data?.status == true ? (
+          <ServiceSlugPageSec04 data={data}/>
+        ):null}
+        
     </main>
   )
 }
