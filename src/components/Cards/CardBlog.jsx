@@ -37,7 +37,7 @@ export default function CardBlog({index,item}) {
             blurDataURL={urlFor(item?.mainImage?.image).width(10).quality(20).blur(10).url()}
             width="100%" height="100%" />
         </div>
-        <div className="flex w-full justify-center items-center">
+        <div className="flex w-full items-center">
           <h3 className={`lg:text-[16px] text-[#161616] font-semibold leading-[125%] ${ibm.className}`}>
             {item?.title}
           </h3>
