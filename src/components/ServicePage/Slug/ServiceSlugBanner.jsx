@@ -122,15 +122,15 @@ export default function ServiceSlugBanner({ data }) {
               className="flex flex-col items-center w-full lg:w-[calc(50%-12px)] gap-y-[32px] rounded-[16px] p-6 lg:p-[40px] bg-[#fcfcfc]/90"
             >
                 <div>
-                    <h2 className="text-[24px] lg:text-[36px] text-[#161616] font-bold uppercase leading-[125%]">
-                    {`start what you have in mind`}
+                    <h2 className="text-[24px] lg:text-[36px] text-[#161616] font-bold uppercase leading-[125%] text-center">
+                    {`start what you have`}
                 </h2>
-                <h2 className="text-[24px] lg:text-[36px] text-[#161616] font-bold uppercase leading-[125%]">
+                <h2 className="text-[24px] lg:text-[36px] text-[#161616] font-normal uppercase leading-[125%] text-center italic">
                     {` in mind`}
                 </h2>
                 </div>
-                <p className="text-[16px] lg:text-[20px] text-[#FB602F] font-normal leading-[150%]">
-
+                <p className="text-[16px] lg:text-[20px] text-[#FB602F] font-normal leading-[150%] text-center">
+                  Consult with Cyclic
                 </p>
                 
               <Input
