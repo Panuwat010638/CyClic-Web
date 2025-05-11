@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+รายละเอียดโปรเจกต์
+CYCLIC Business Solution เป็นแพลตฟอร์มให้คำปรึกษาทางธุรกิจแบบครบวงจรสำหรับผู้ประกอบการ SMEs ที่ต้องการยกระดับธุรกิจ เรานำเสนอโซลูชันที่ครอบคลุมทั้งการให้คำปรึกษาทางธุรกิจ การพัฒนาระบบซอฟต์แวร์ และการออกแบบกลยุทธ์การตลาดที่ขับเคลื่อนด้วยข้อมูล
+เว็บไซต์นี้เป็นจุดศูนย์กลางในการนำเสนอบริการของ CYCLIC พร้อมระบบนัดหมายการให้คำปรึกษาฟรีเบื้องต้น แสดงกรณีศึกษาความสำเร็จ และนำเสนอข้อมูลเชิงลึกที่เป็นประโยชน์สำหรับผู้ประกอบการ ด้วยการใช้ Next.js และ Sanity CMS ทำให้เว็บไซต์มีประสิทธิภาพสูง สามารถปรับแต่งเนื้อหาได้ง่าย และมอบประสบการณ์ผู้ใช้ที่ราบรื่น
 
-## Getting Started
+จุดเด่นของเรา
 
-First, run the development server:
+บริการแบบครบวงจร - ทั้งการให้คำปรึกษาธุรกิจ พัฒนาซอฟต์แวร์ และวางกลยุทธ์การตลาด
+เน้นการวิเคราะห์ข้อมูลเชิงลึก - ใช้ข้อมูลขับเคลื่อนการตัดสินใจทางธุรกิจ
+ปรึกษาเบื้องต้นฟรี - เข้าใจความต้องการของลูกค้าอย่างละเอียดก่อนนำเสนอโซลูชัน
+โซลูชันที่ปรับแต่งได้ - ออกแบบตามความต้องการเฉพาะของแต่ละธุรกิจ
+มุ่งเน้นความยั่งยืน - วางแผนการเติบโตระยะยาวในตลาดที่มีการแข่งขันสูง
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Live Demo: [\[CyClic\]](https://www.cyclic.co.th/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Frontend:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-Next.js v.15 (App Router)
+-Javascript
+-Tailwind CSS
+-HeroUI
+-Gsap
+-Framer Motion
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+CMS & Backend:
+-Sanity v.3.x (Headless CMS)
+-Next.js API Routes
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Authentication:
+-[NextAuth.js หรือระบบ Authentication อื่นๆ]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Deployment:
+-Vercel
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+การติดตั้งและการใช้งาน
+ความต้องการเบื้องต้น
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Node.js (v18+)
+Sanity Account
+Vercel Account (สำหรับการ Deploy)
